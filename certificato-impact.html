@@ -121,8 +121,8 @@
     </nav>
   </div>
 
-  <!-- HEADER -->
-  <div class="fixed top-6 right-6 z-40 flex items-center gap-4">
+  <!-- HEADER (non fixed, scrolla con la pagina) -->
+  <div class="absolute top-6 right-6 z-40 flex items-center gap-4">
     <div class="relative">
       <button class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-card border border-transparent hover:border-white/10 transition-all group">
         <div class="w-10 h-10 rounded-full bg-primary text-black font-black flex items-center justify-center">GG</div>
@@ -185,42 +185,28 @@
             <div class="p-8">
               <div class="flex flex-col md:flex-row gap-8 items-start">
 
-                <!-- Immagine Certificato SVG -->
-                <div class="flex-shrink-0 cert-glow">
-                  <svg width="280" height="360" viewBox="0 0 280 360" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-2xl">
-                    <!-- Background -->
+                <!-- Immagine Certificato SVG (ridotto ~1/4) -->
+                <div class="flex-shrink-0 cert-glow relative">
+                  <svg width="160" height="205" viewBox="0 0 280 360" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-xl">
                     <rect width="280" height="360" rx="16" fill="#0D1117"/>
                     <rect x="1" y="1" width="278" height="358" rx="15" stroke="#10B981" stroke-width="2" stroke-opacity="0.3"/>
-                    <!-- Inner border decorative -->
                     <rect x="12" y="12" width="256" height="336" rx="10" stroke="#10B981" stroke-width="0.5" stroke-opacity="0.15" stroke-dasharray="4 4"/>
-                    <!-- Top accent bar -->
                     <rect x="0" y="0" width="280" height="6" rx="3" fill="url(#greenGrad)"/>
-                    <!-- GH Logo circle -->
                     <circle cx="140" cy="70" r="32" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="1.5"/>
                     <text x="140" y="66" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="1">GREEN</text>
                     <text x="140" y="80" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="1">HUB</text>
-                    <!-- Title -->
                     <text x="140" y="126" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="16" font-weight="800" letter-spacing="2">CERTIFICATO</text>
                     <text x="140" y="148" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="22" font-weight="900" letter-spacing="3">IMPACT</text>
-                    <!-- Divider -->
                     <line x1="60" y1="165" x2="220" y2="165" stroke="#10B981" stroke-opacity="0.3" stroke-width="1"/>
-                    <!-- Stars (3 stelle = livello 3) -->
                     <text x="104" y="196" fill="#10B981" font-size="28">&#9733;</text>
                     <text x="130" y="196" fill="#10B981" font-size="28">&#9733;</text>
                     <text x="156" y="196" fill="#10B981" font-size="28">&#9733;</text>
-                    <!-- Empty stars -->
-                    <text x="104" y="196" fill="none" stroke="#10B981" stroke-width="0.5" font-size="28" opacity="0.3">&#9733;</text>
-                    <!-- Level label -->
                     <text x="140" y="218" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="11" font-weight="600" opacity="0.6">LIVELLO 3 — TREE</text>
-                    <!-- Company name -->
                     <text x="140" y="252" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="13" font-weight="700">EcoTech Solutions S.r.l.</text>
                     <text x="140" y="270" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="10" font-weight="400" opacity="0.5">Salerno, Italia</text>
-                    <!-- Year -->
                     <rect x="105" y="290" width="70" height="28" rx="6" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="1"/>
                     <text x="140" y="309" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="16" font-weight="800">2026</text>
-                    <!-- Serial -->
                     <text x="140" y="340" text-anchor="middle" fill="white" font-family="Inter, monospace" font-size="10" font-weight="500" opacity="0.35">GH-2026-4827</text>
-                    <!-- Gradient def -->
                     <defs>
                       <linearGradient id="greenGrad" x1="0" y1="0" x2="280" y2="0">
                         <stop offset="0%" stop-color="#059669"/>
@@ -229,6 +215,7 @@
                       </linearGradient>
                     </defs>
                   </svg>
+                  <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded bg-amber-500/20 border border-amber-500/30 text-[9px] font-bold text-amber-400 uppercase tracking-widest whitespace-nowrap">Grafica Beta</div>
                 </div>
 
                 <!-- Condivisione in evidenza -->
@@ -299,7 +286,7 @@
           </div>
 
           <!-- CARD CERTIFICATO INFO -->
-          <div class="bg-card rounded-2xl border border-card-border overflow-hidden fade-in-up fade-in-up-delay-1">
+          <div class="bg-card rounded-2xl border border-card-border overflow-hidden fade-in-up fade-in-up-delay-1" data-public>
             <div class="relative p-8 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border-b border-white/5">
               <div class="cert-shine absolute inset-0 rounded-t-2xl"></div>
               <div class="relative flex items-start gap-6">
@@ -379,76 +366,114 @@
           </div>
 
           <!-- PERCORSO GREEN -->
-          <div class="bg-card rounded-2xl border border-card-border p-8 fade-in-up fade-in-up-delay-2">
+          <div class="bg-card rounded-2xl border border-card-border p-8 fade-in-up fade-in-up-delay-2" data-public>
             <div class="flex items-center justify-between mb-6">
               <div>
                 <h3 class="text-xl font-bold">Percorso Green</h3>
-                <p class="text-sm text-white/40 mt-1">Le azioni concrete verso la sostenibilità</p>
+                <p class="text-sm text-white/40 mt-1">Corsi, Camp, Viaggi Business e attività completate</p>
               </div>
               <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                <span class="text-sm font-semibold text-primary">12 azioni completate</span>
+                <span class="text-sm font-semibold text-primary">12 attività completate</span>
               </div>
             </div>
             <div class="space-y-3">
-              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
-                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                </div>
-                <div class="flex-1">
-                  <div class="font-medium text-sm">Audit energetico completato</div>
-                  <div class="text-xs text-white/40 mt-0.5">Environmental &bull; 12 Gen 2026</div>
-                </div>
-                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+50 XP</span>
-              </div>
-              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
-                <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                </div>
-                <div class="flex-1">
-                  <div class="font-medium text-sm">Policy welfare aziendale pubblicata</div>
-                  <div class="text-xs text-white/40 mt-0.5">Social &bull; 28 Gen 2026</div>
-                </div>
-                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+75 XP</span>
-              </div>
-              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
-                <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                </div>
-                <div class="flex-1">
-                  <div class="font-medium text-sm">Codice Etico approvato dal CdA</div>
-                  <div class="text-xs text-white/40 mt-0.5">Governance &bull; 15 Feb 2026</div>
-                </div>
-                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+100 XP</span>
-              </div>
+              <!-- Corso Academy -->
               <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
                 <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5s6 3 6 3 6-3 6-3v-5"></path></svg>
                 </div>
                 <div class="flex-1">
                   <div class="font-medium text-sm">Carbon Footprint Mastery — Corso completato</div>
-                  <div class="text-xs text-white/40 mt-0.5">Academy &bull; 2 Mar 2026</div>
+                  <div class="text-xs text-white/40 mt-0.5">Academy &bull; 12 Gen 2026</div>
                 </div>
                 <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+100 XP</span>
               </div>
+              <!-- Specializzazione -->
               <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
-                <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber-400"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-400"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"></path><path d="m9 12 2 2 4-4"></path></svg>
                 </div>
                 <div class="flex-1">
-                  <div class="font-medium text-sm">Report Sostenibilità 2025 generato</div>
-                  <div class="text-xs text-white/40 mt-0.5">Reporting &bull; 10 Mar 2026</div>
+                  <div class="font-medium text-sm">Specializzazione ESG per PMI completata</div>
+                  <div class="text-xs text-white/40 mt-0.5">Specializzazione &bull; 28 Gen 2026</div>
                 </div>
-                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+75 XP</span>
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+150 XP</span>
+              </div>
+              <!-- Camp -->
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber-400"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="font-medium text-sm">Green Hub Camp — Partecipazione completata</div>
+                  <div class="text-xs text-white/40 mt-0.5">Camp &bull; 15 Feb 2026</div>
+                </div>
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+200 XP</span>
+              </div>
+              <!-- Viaggio Business -->
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-400"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="font-medium text-sm">Viaggio Business — Sustainable Innovation Tour</div>
+                  <div class="text-xs text-white/40 mt-0.5">Viaggio Business &bull; 2 Mar 2026</div>
+                </div>
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+250 XP</span>
+              </div>
+              <!-- Attività Marketplace -->
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="font-medium text-sm">Attività 1 Marketplace — Consulenza Energia</div>
+                  <div class="text-xs text-white/40 mt-0.5">Marketplace &bull; 10 Mar 2026</div>
+                </div>
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+50 XP</span>
+              </div>
+              <!-- Corso Academy 2 -->
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5s6 3 6 3 6-3 6-3v-5"></path></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="font-medium text-sm">Circular Economy Operations — Corso completato</div>
+                  <div class="text-xs text-white/40 mt-0.5">Academy &bull; 22 Mar 2026</div>
+                </div>
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+100 XP</span>
+              </div>
+              <!-- Attività Marketplace 2 -->
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="font-medium text-sm">Attività 2 Marketplace — Certificazione ISO</div>
+                  <div class="text-xs text-white/40 mt-0.5">Marketplace &bull; 5 Apr 2026</div>
+                </div>
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+50 XP</span>
+              </div>
+              <!-- Upload Report -->
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/[0.08] transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-400"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M12 18v-6"></path><path d="m9 15 3-3 3 3"></path></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="font-medium text-sm">Report Sostenibilità 2025 — Documento caricato</div>
+                  <div class="text-xs text-white/40 mt-0.5">Documenti &bull; 18 Apr 2026</div>
+                </div>
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">+15 XP</span>
               </div>
             </div>
             <button class="w-full mt-4 py-3 text-sm font-medium text-white/50 hover:text-primary border border-white/10 hover:border-primary/30 rounded-xl transition-all">
-              Mostra tutte le 12 azioni &rarr;
+              Mostra tutte le 12 attività &rarr;
             </button>
           </div>
 
           <!-- BADGE SBLOCCATI -->
-          <div class="bg-card rounded-2xl border border-card-border p-8 fade-in-up fade-in-up-delay-3">
+          <div class="bg-card rounded-2xl border border-card-border p-8 fade-in-up fade-in-up-delay-3" data-public>
             <div class="flex items-center justify-between mb-6">
               <div>
                 <h3 class="text-xl font-bold">Badge Sbloccati</h3>
@@ -508,6 +533,11 @@
 
           <!-- VERIFICA CERTIFICATO -->
           <div class="bg-card rounded-2xl border border-card-border p-6 fade-in-up fade-in-up-delay-1">
+            <!-- Nota sviluppo -->
+            <div class="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/20">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber-400 flex-shrink-0"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              <span class="text-[11px] text-amber-400/80">Visibile solo all'account — i visitatori vedono la pagina pubblica</span>
+            </div>
             <div class="flex items-center gap-3 mb-4">
               <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"></path><path d="m9 12 2 2 4-4"></path></svg>
@@ -533,13 +563,13 @@
           </div>
 
           <!-- STATISTICHE -->
-          <div class="bg-card rounded-2xl border border-card-border p-6 fade-in-up fade-in-up-delay-2">
+          <div class="bg-card rounded-2xl border border-card-border p-6 fade-in-up fade-in-up-delay-2" data-public>
             <h4 class="text-sm font-semibold text-white/50 uppercase tracking-wider mb-4">Statistiche</h4>
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
                   <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
-                  <span class="text-sm text-white/70">Azioni completate</span>
+                  <span class="text-sm text-white/70">Attività completate</span>
                 </div>
                 <span class="text-sm font-bold">12</span>
               </div>
@@ -575,7 +605,7 @@
           </div>
 
           <!-- CONTATTI AZIENDA -->
-          <div class="bg-card rounded-2xl border border-card-border p-6 fade-in-up fade-in-up-delay-3">
+          <div class="bg-card rounded-2xl border border-card-border p-6 fade-in-up fade-in-up-delay-3" data-public>
             <h4 class="text-sm font-semibold text-white/50 uppercase tracking-wider mb-4">Contatta l'azienda</h4>
             <div class="space-y-3">
               <a href="#" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group">
@@ -600,7 +630,7 @@
           </div>
 
           <!-- TIMELINE LIVELLI -->
-          <div class="bg-card rounded-2xl border border-card-border p-6 fade-in-up fade-in-up-delay-4">
+          <div class="bg-card rounded-2xl border border-card-border p-6 fade-in-up fade-in-up-delay-4" data-public>
             <h4 class="text-sm font-semibold text-white/50 uppercase tracking-wider mb-4">Progressione Livelli</h4>
             <div class="space-y-0">
               <div class="flex items-start gap-3">
@@ -661,27 +691,40 @@
   </button>
 
   <script>
-    // Privacy toggle
+    // Privacy toggle — mostra/nasconde sezioni pubbliche
     const toggle = document.getElementById('privacyToggle');
     const dot = document.getElementById('privacyDot');
     const label = document.getElementById('privacyLabel');
+    const publicSections = document.querySelectorAll('[data-public]');
     let isPublic = true;
-    toggle?.addEventListener('click', () => {
-      isPublic = !isPublic;
+
+    function setPrivacyMode(pub) {
+      isPublic = pub;
       if (isPublic) {
         toggle.classList.remove('bg-white/20');
         toggle.classList.add('bg-primary');
         dot.style.right = '2px';
         dot.style.left = 'auto';
         label.textContent = 'Pubblica';
+        publicSections.forEach(el => {
+          el.style.display = '';
+          el.style.opacity = '1';
+        });
       } else {
         toggle.classList.remove('bg-primary');
         toggle.classList.add('bg-white/20');
         dot.style.left = '2px';
         dot.style.right = 'auto';
         label.textContent = 'Privata';
+        publicSections.forEach(el => {
+          el.style.opacity = '0';
+          el.style.transition = 'opacity 0.3s ease';
+          setTimeout(() => { el.style.display = 'none'; }, 300);
+        });
       }
-    });
+    }
+
+    toggle?.addEventListener('click', () => setPrivacyMode(!isPublic));
 
     // Copy link
     function copyLink() {
@@ -711,8 +754,6 @@
     // Share LinkedIn
     function shareLinkedIn() {
       const url = encodeURIComponent('https://thegreenhub.org/impact/GH-2026-4827');
-      const title = encodeURIComponent('Certificato IMPACT 2026 - Green Hub');
-      const summary = encodeURIComponent('EcoTech Solutions ha ottenuto il Certificato IMPACT Livello 3 (Tree) da Green Hub, verificando il proprio impegno nella sostenibilità aziendale ESG.');
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'width=600,height=500');
     }
   </script>
