@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenHub - Assistenza</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: { extend: { colors: { primary: '#10B981', 'primary-dark': '#059669', card: '#1A1A1A', 'card-light': '#222222', 'card-border': '#2A2A2A' } } }
+  }
+  </script>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+
+  <!-- SIDEBAR -->
+  <div class="fixed left-0 top-0 h-screen w-20 bg-black border-r border-white/10 flex flex-col items-center py-6 z-50">
+    <div class="mb-8">
+      <img src="https://thegreenhub.org/wp-content/uploads/2025/02/cropped-logo-green-e1761402025428.png" alt="Green Hub" class="w-12 h-12 object-contain">
+    </div>
+    <nav class="flex flex-col gap-4 mb-8">
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Home" href="home.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Dashboard" href="dashboard.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Opportunita" href="opportunita.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Marketplace" href="marketplace.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Eventi" href="eventi.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="YouTube" href="youtube.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Toolkit" href="toolkit.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Certificato IMPACT" href="certificato-impact.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"></path><path d="m9 12 2 2 4-4"></path></svg>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Cerca" href="cerca.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      </a>
+    </nav>
+    <div class="w-8 h-px bg-white/10 mb-8"></div>
+    <nav class="flex-1 flex flex-col gap-4">
+      <a class="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden ring-1 ring-white/10 hover:ring-white/30" title="Profilo" href="profilo.html">
+        <div class="w-full h-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">GG</div>
+      </a>
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Impostazioni" href="impostazioni.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+      </a>
+      <!-- Assistenza (ACTIVE) -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center bg-primary text-black" title="Assistenza" href="assistenza.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
+      </a>
+    </nav>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="ml-20 min-h-screen">
+    <!-- HEADER -->
+    <header class="h-16 border-b border-card-border flex items-center justify-end px-8">
+      <div class="flex items-center gap-3">
+        <div class="text-right">
+          <p class="text-sm font-medium">Gianpaolo Greco</p>
+          <p class="text-xs text-white/50">gianpaologreco@gmail.com</p>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm">GG</div>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <div class="p-8 max-w-4xl">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Centro Assistenza</h1>
+        <p class="text-white/60">Come possiamo aiutarti?</p>
+      </div>
+
+      <!-- SEARCH BAR -->
+      <div class="mb-10">
+        <div class="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/30"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <input type="text" placeholder="Cerca nelle FAQ..." class="w-full bg-card border border-card-border rounded-xl pl-12 pr-4 py-4 text-white text-base focus:outline-none focus:border-primary placeholder-white/30">
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mb-10">
+        <h2 class="text-xl font-semibold mb-6">Domande frequenti</h2>
+        <div class="space-y-3" id="faq-container">
+          <!-- FAQ 1 -->
+          <div class="bg-card border border-card-border rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+              <span class="font-medium text-sm">Come ottengo il Certificato IMPACT?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/30 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <div class="px-6 pb-4 hidden">
+              <p class="text-sm text-white/60">Per ottenere il Certificato IMPACT devi completare il percorso di certificazione disponibile nella sezione dedicata. Il percorso prevede la compilazione di un questionario, il caricamento della documentazione aziendale e una verifica da parte del nostro team. Il processo richiede circa 2-4 settimane.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-card border border-card-border rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+              <span class="font-medium text-sm">Come funziona il Marketplace?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/30 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <div class="px-6 pb-4 hidden">
+              <p class="text-sm text-white/60">Il Marketplace di GreenHub ti permette di trovare prodotti e servizi sostenibili da fornitori verificati. Puoi filtrare per categoria, prezzo e certificazioni. Ogni fornitore viene verificato dal nostro team prima di essere inserito nella piattaforma.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-card border border-card-border rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+              <span class="font-medium text-sm">Posso modificare i miei dati aziendali?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/30 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <div class="px-6 pb-4 hidden">
+              <p class="text-sm text-white/60">Si, puoi modificare i dati aziendali dalla sezione Profilo oppure da Impostazioni. Alcune modifiche, come il cambio di ragione sociale o P.IVA, richiedono una verifica aggiuntiva che viene completata entro 48 ore lavorative.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-card border border-card-border rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+              <span class="font-medium text-sm">Quali metodi di pagamento accettate?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/30 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <div class="px-6 pb-4 hidden">
+              <p class="text-sm text-white/60">Accettiamo carte di credito e debito (Visa, Mastercard, American Express), bonifico bancario e PayPal. Per le aziende e possibile richiedere il pagamento tramite fattura a 30 giorni, previa approvazione.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="bg-card border border-card-border rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+              <span class="font-medium text-sm">Come cancello il mio account?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/30 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <div class="px-6 pb-4 hidden">
+              <p class="text-sm text-white/60">Puoi richiedere la cancellazione del tuo account dalla sezione Impostazioni, cliccando su "Elimina account". La cancellazione e irreversibile e comporta la perdita di tutti i dati, certificati e cronologia. Ti invieremo una email di conferma prima di procedere.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="bg-card border border-card-border rounded-xl overflow-hidden">
+            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-4 text-left">
+              <span class="font-medium text-sm">Come contatto il supporto?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/30 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <div class="px-6 pb-4 hidden">
+              <p class="text-sm text-white/60">Puoi contattarci via email a supporto@greenhub.it, tramite la chat live disponibile dal lunedi al venerdi dalle 9 alle 18, oppure telefonicamente al numero 02 1234567. Per richieste urgenti, ti consigliamo la chat live per tempi di risposta piu rapidi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="mb-10">
+        <h2 class="text-xl font-semibold mb-6">Contattaci</h2>
+        <div class="grid grid-cols-3 gap-6">
+          <div class="bg-card border border-card-border rounded-xl p-6 text-center">
+            <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            </div>
+            <h3 class="font-semibold mb-1">Email</h3>
+            <p class="text-sm text-white/50 mb-3">Rispondiamo entro 24 ore</p>
+            <a href="mailto:supporto@greenhub.it" class="text-primary text-sm font-medium">supporto@greenhub.it</a>
+          </div>
+
+          <div class="bg-card border border-card-border rounded-xl p-6 text-center">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="font-semibold mb-1">Chat live</h3>
+            <p class="text-sm text-white/50 mb-3">Disponibile lun-ven 9-18</p>
+            <button class="text-primary text-sm font-medium">Avvia chat</button>
+          </div>
+
+          <div class="bg-card border border-card-border rounded-xl p-6 text-center">
+            <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h3 class="font-semibold mb-1">Telefono</h3>
+            <p class="text-sm text-white/50 mb-3">Lun-ven 9-18</p>
+            <a href="tel:+39021234567" class="text-primary text-sm font-medium">02 1234567</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TICKETS -->
+      <div>
+        <h2 class="text-xl font-semibold mb-6">Ticket aperti</h2>
+        <div class="bg-card border border-card-border rounded-xl overflow-hidden">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b border-card-border">
+                <th class="text-left px-6 py-3 text-xs text-white/40 font-medium">ID</th>
+                <th class="text-left px-6 py-3 text-xs text-white/40 font-medium">Oggetto</th>
+                <th class="text-left px-6 py-3 text-xs text-white/40 font-medium">Stato</th>
+                <th class="text-left px-6 py-3 text-xs text-white/40 font-medium">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-card-border hover:bg-card-light">
+                <td class="px-6 py-4 text-sm font-mono text-white/60">#TK-2847</td>
+                <td class="px-6 py-4 text-sm">Problema caricamento documentazione per certificazione</td>
+                <td class="px-6 py-4"><span class="px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-500 text-xs font-medium">In lavorazione</span></td>
+                <td class="px-6 py-4 text-sm text-white/50">14 Giu 2026</td>
+              </tr>
+              <tr class="hover:bg-card-light">
+                <td class="px-6 py-4 text-sm font-mono text-white/60">#TK-2831</td>
+                <td class="px-6 py-4 text-sm">Richiesta fattura per acquisto marketplace</td>
+                <td class="px-6 py-4"><span class="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">Risposta ricevuta</span></td>
+                <td class="px-6 py-4 text-sm text-white/50">10 Giu 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAB ASSISTENZA -->
+  <div class="fixed bottom-8 right-8 z-50">
+    <button class="w-14 h-14 rounded-full bg-primary hover:bg-primary-dark transition-colors flex items-center justify-center shadow-lg shadow-primary/25 relative">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
+      <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">2</span>
+    </button>
+  </div>
+
+  <script>
+  function toggleFaq(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('svg');
+    content.classList.toggle('hidden');
+    icon.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
+  }
+  </script>
+
+</body>
+</html>

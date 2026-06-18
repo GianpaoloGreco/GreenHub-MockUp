@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video - Green Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: { extend: { colors: { primary: '#10B981', 'primary-dark': '#059669', card: '#1A1A1A', 'card-light': '#222222', 'card-border': '#2A2A2A' } } }
+  }
+  </script>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen bg-black text-white">
+
+  <!-- SIDEBAR -->
+  <div class="fixed left-0 top-0 h-screen w-20 bg-black border-r border-white/10 flex flex-col items-center py-6 z-50">
+    <div class="mb-8">
+      <img src="https://thegreenhub.org/wp-content/uploads/2025/02/cropped-logo-green-e1761402025428.png" alt="Green Hub" class="w-12 h-12 object-contain">
+    </div>
+    <nav class="flex flex-col gap-4 mb-8">
+      <!-- Home -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Home" href="home.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+      </a>
+      <!-- Dashboard -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Dashboard" href="dashboard.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>
+      </a>
+      <!-- Opportunita -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Opportunita" href="opportunita.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </a>
+      <!-- Marketplace -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Marketplace" href="marketplace.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+      </a>
+      <!-- Eventi -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Eventi" href="eventi.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+      </a>
+      <!-- YouTube (ACTIVE) -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center bg-primary text-black" title="YouTube" href="youtube.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+      </a>
+      <!-- Toolkit -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Toolkit" href="toolkit.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+      </a>
+      <!-- Certificato IMPACT -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Certificato IMPACT" href="certificato-impact.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"></path><path d="m9 12 2 2 4-4"></path></svg>
+      </a>
+      <!-- Cerca -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Cerca" href="cerca.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      </a>
+    </nav>
+    <div class="w-8 h-px bg-white/10 mb-8"></div>
+    <nav class="flex-1 flex flex-col gap-4">
+      <!-- Profilo -->
+      <a class="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden ring-1 ring-white/10 hover:ring-white/30" title="Profilo" href="profilo.html">
+        <div class="w-full h-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">GG</div>
+      </a>
+      <!-- Impostazioni -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Impostazioni" href="impostazioni.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+      </a>
+      <!-- Assistenza -->
+      <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Assistenza" href="assistenza.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
+      </a>
+    </nav>
+  </div>
+
+  <!-- HEADER -->
+  <div class="absolute right-6 top-6 z-40 flex items-center gap-4">
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-card border border-transparent hover:border-white/10 transition-all group">
+      <div class="w-10 h-10 rounded-full bg-primary text-black font-black flex items-center justify-center">GG</div>
+      <div class="hidden lg:block text-left">
+        <div class="text-sm font-semibold text-white group-hover:text-primary transition-colors">Gianpaolo Greco</div>
+        <div class="text-xs text-white/50">gianpaologreco@gmail.com</div>
+      </div>
+    </button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="ml-20 min-h-screen p-8">
+    <!-- Page Header -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-white mb-2">Video e Formazione</h1>
+      <p class="text-white/50">Contenuti selezionati per il tuo percorso ESG</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-primary text-black">Tutti</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Sostenibilita</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Normativa</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Casi Studio</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Tutorial</button>
+    </div>
+
+    <!-- Video in evidenza -->
+    <h2 class="text-lg font-semibold text-white mb-4">Video in evidenza</h2>
+    <div class="bg-card border border-card-border rounded-xl overflow-hidden mb-10 hover:border-white/20 transition-all">
+      <div class="flex flex-col lg:flex-row">
+        <!-- Thumbnail Hero -->
+        <div class="relative lg:w-2/3 aspect-video bg-gradient-to-br from-primary/40 via-emerald-900/60 to-black flex items-center justify-center cursor-pointer group">
+          <div class="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="absolute bottom-3 right-3 px-2 py-1 bg-black/80 rounded text-xs font-medium text-white">32:15</span>
+        </div>
+        <!-- Info -->
+        <div class="lg:w-1/3 p-6 flex flex-col justify-center">
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/20 text-primary w-fit mb-3">In evidenza</span>
+          <h3 class="text-xl font-bold text-white mb-2">Guida completa ESG per PMI 2026</h3>
+          <p class="text-sm text-white/50 mb-4">Tutto quello che una piccola e media impresa deve sapere per avvicinarsi alla sostenibilita. Dalla normativa agli strumenti pratici, passando per i casi di successo italiani.</p>
+          <div class="flex items-center gap-3 text-xs text-white/40 mb-5">
+            <span>Green Hub</span>
+            <span>-</span>
+            <span>32 min</span>
+            <span>-</span>
+            <span>5.2K visualizzazioni</span>
+          </div>
+          <button class="px-6 py-3 bg-primary hover:bg-primary-dark text-black font-semibold rounded-lg transition-colors w-fit flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            Guarda ora
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Griglia Video -->
+    <h2 class="text-lg font-semibold text-white mb-4">Tutti i video</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-10">
+
+      <!-- Video 1 -->
+      <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/20 transition-all group cursor-pointer">
+        <div class="relative aspect-video bg-gradient-to-br from-teal-800/50 to-emerald-900/30 flex items-center justify-center">
+          <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 rounded text-[10px] font-medium text-white">12:34</span>
+        </div>
+        <div class="p-4">
+          <h3 class="text-sm font-semibold text-white mb-1 line-clamp-2">Cos'e l'economia circolare?</h3>
+          <p class="text-xs text-white/50 mb-2">Green Hub</p>
+          <div class="flex items-center gap-2 text-xs text-white/40">
+            <span>2.4K views</span>
+            <span>-</span>
+            <span>2 settimane fa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/20 transition-all group cursor-pointer">
+        <div class="relative aspect-video bg-gradient-to-br from-sky-800/50 to-blue-900/30 flex items-center justify-center">
+          <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 rounded text-[10px] font-medium text-white">15:08</span>
+        </div>
+        <div class="p-4">
+          <h3 class="text-sm font-semibold text-white mb-1 line-clamp-2">Carbon Footprint spiegato semplice</h3>
+          <p class="text-xs text-white/50 mb-2">Green Hub</p>
+          <div class="flex items-center gap-2 text-xs text-white/40">
+            <span>1.8K views</span>
+            <span>-</span>
+            <span>3 settimane fa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/20 transition-all group cursor-pointer">
+        <div class="relative aspect-video bg-gradient-to-br from-violet-800/50 to-purple-900/30 flex items-center justify-center">
+          <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 rounded text-[10px] font-medium text-white">20:45</span>
+        </div>
+        <div class="p-4">
+          <h3 class="text-sm font-semibold text-white mb-1 line-clamp-2">CSRD: cosa cambia per le PMI</h3>
+          <p class="text-xs text-white/50 mb-2">Green Hub</p>
+          <div class="flex items-center gap-2 text-xs text-white/40">
+            <span>3.1K views</span>
+            <span>-</span>
+            <span>1 mese fa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/20 transition-all group cursor-pointer">
+        <div class="relative aspect-video bg-gradient-to-br from-amber-800/50 to-orange-900/30 flex items-center justify-center">
+          <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 rounded text-[10px] font-medium text-white">18:22</span>
+        </div>
+        <div class="p-4">
+          <h3 class="text-sm font-semibold text-white mb-1 line-clamp-2">Energia rinnovabile in azienda</h3>
+          <p class="text-xs text-white/50 mb-2">Green Hub</p>
+          <div class="flex items-center gap-2 text-xs text-white/40">
+            <span>1.2K views</span>
+            <span>-</span>
+            <span>1 mese fa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/20 transition-all group cursor-pointer">
+        <div class="relative aspect-video bg-gradient-to-br from-rose-800/50 to-red-900/30 flex items-center justify-center">
+          <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 rounded text-[10px] font-medium text-white">14:50</span>
+        </div>
+        <div class="p-4">
+          <h3 class="text-sm font-semibold text-white mb-1 line-clamp-2">Supply chain sostenibile</h3>
+          <p class="text-xs text-white/50 mb-2">Green Hub</p>
+          <div class="flex items-center gap-2 text-xs text-white/40">
+            <span>980 views</span>
+            <span>-</span>
+            <span>2 mesi fa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 6 -->
+      <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/20 transition-all group cursor-pointer">
+        <div class="relative aspect-video bg-gradient-to-br from-cyan-800/50 to-teal-900/30 flex items-center justify-center">
+          <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 rounded text-[10px] font-medium text-white">25:10</span>
+        </div>
+        <div class="p-4">
+          <h3 class="text-sm font-semibold text-white mb-1 line-clamp-2">Intervista: PMI e transizione verde</h3>
+          <p class="text-xs text-white/50 mb-2">Green Hub</p>
+          <div class="flex items-center gap-2 text-xs text-white/40">
+            <span>1.5K views</span>
+            <span>-</span>
+            <span>2 mesi fa</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Playlist consigliate -->
+    <h2 class="text-lg font-semibold text-white mb-4">Playlist consigliate</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+
+      <!-- Playlist 1 -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all cursor-pointer flex items-center gap-4">
+        <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/30 to-emerald-900/50 flex-shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M21 15V6"></path><path d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="M12 12H3"></path><path d="M16 6H3"></path><path d="M12 18H3"></path></svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-1">Fondamenti ESG per principianti</h3>
+          <p class="text-xs text-white/50">8 video - Durata totale: 2h 15min</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ml-auto text-white/30"><path d="m9 18 6-6-6-6"></path></svg>
+      </div>
+
+      <!-- Playlist 2 -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all cursor-pointer flex items-center gap-4">
+        <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-500/30 to-indigo-900/50 flex-shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2"><path d="M21 15V6"></path><path d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path><path d="M12 12H3"></path><path d="M16 6H3"></path><path d="M12 18H3"></path></svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-1">Normativa e compliance ambientale</h3>
+          <p class="text-xs text-white/50">5 video - Durata totale: 1h 40min</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ml-auto text-white/30"><path d="m9 18 6-6-6-6"></path></svg>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FAB Assistenza -->
+  <button class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center shadow-lg shadow-primary/25 transition-all hover:scale-105">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
+    <span class="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 rounded-full text-[10px] font-bold text-white flex items-center justify-center">2</span>
+  </button>
+
+</body>
+</html>
