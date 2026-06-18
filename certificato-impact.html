@@ -69,10 +69,6 @@
     body.mode-member [data-vis="member"] { display: block !important; }
 
     /* === PANNELLO LATERALE SLIDE === */
-    .slide-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 480px; max-width: 90vw; background: #111; border-left: 1px solid rgba(255,255,255,0.1); z-index: 9998; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); overflow-y: auto; padding-top: 52px; }
-    .slide-panel.open { transform: translateX(0); }
-    .slide-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9997; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
-    .slide-overlay.open { opacity: 1; pointer-events: all; }
 
     /* === DEV TOOLBAR -IN ALTO, VISIVAMENTE DISTINTA === */
     .dev-toolbar {
@@ -266,160 +262,17 @@
             </p>
 
             <div class="max-w-sm mx-auto">
-              <button onclick="memberNotify(this)" class="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-primary text-black font-semibold hover:bg-primary-dark transition-all text-base">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
-                Avvisami quando e disponibile
-              </button>
-              <p class="text-xs text-white/30 mt-3 text-center">Nessuno spam -solo un avviso quando il certificato sara pronto per te.</p>
+              <a href="percorso.html" class="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-primary text-black font-semibold hover:bg-primary-dark transition-all text-base no-underline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5s6 3 6 3 6-3 6-3v-5"></path></svg>
+                Inizia il percorso
+              </a>
+              <p class="text-xs text-white/30 mt-3 text-center">Completa le tappe per sbloccare il tuo Certificato IMPACT.</p>
             </div>
 
           </div>
         </div>
 
-        <!-- PERCORSO PER SBLOCCARE IL CERTIFICATO -->
-        <div class="mt-10">
-          <div class="flex items-center justify-between mb-6">
-            <div>
-              <h3 class="text-xl font-bold">Il tuo percorso</h3>
-              <p class="text-sm text-white/40 mt-1">Completa le tappe per sbloccare il Certificato IMPACT</p>
-            </div>
-            <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
-              <span class="text-sm text-white/50">Completate</span>
-              <span class="text-sm font-bold text-primary">0 / 5</span>
-            </div>
-          </div>
 
-          <!-- Barra progresso generale -->
-          <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden mb-8">
-            <div class="h-full bg-gradient-to-r from-primary to-emerald-400 rounded-full" style="width: 0%"></div>
-          </div>
-
-          <!-- Tappe -->
-          <div class="space-y-0">
-
-            <!-- TAPPA 1 -->
-            <div class="relative flex gap-5 cursor-pointer" onclick="openPanel(0)">
-              <div class="flex flex-col items-center">
-                <div class="w-11 h-11 rounded-full bg-white/5 border-2 border-white/10 flex items-center justify-center z-10"><span class="text-sm font-bold text-white/50">1</span></div>
-                <div class="w-0.5 flex-1 bg-white/10"></div>
-              </div>
-              <div class="flex-1 pb-4">
-                <div class="bg-card rounded-xl border border-white/10 p-5 hover:border-primary/30 transition-all group">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                      <div class="w-10 h-10 rounded-lg bg-blue-500/15 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-400"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
-                      <div>
-                        <h4 class="font-semibold group-hover:text-primary transition-colors">Leggi il Report ESG 2025</h4>
-                        <p class="text-xs text-white/40 mt-0.5">Report - 15 min di lettura</p>
-                      </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 group-hover:text-primary transition-colors flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TAPPA 2 -->
-            <div class="relative flex gap-5 cursor-pointer" onclick="openPanel(1)">
-              <div class="flex flex-col items-center">
-                <div class="w-11 h-11 rounded-full bg-white/5 border-2 border-white/10 flex items-center justify-center z-10"><span class="text-sm font-bold text-white/50">2</span></div>
-                <div class="w-0.5 flex-1 bg-white/10"></div>
-              </div>
-              <div class="flex-1 pb-4">
-                <div class="bg-card rounded-xl border border-white/10 p-5 hover:border-primary/30 transition-all group">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                      <div class="w-10 h-10 rounded-lg bg-purple-500/15 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-400"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect width="15" height="14" x="1" y="5" rx="2" ry="2"></rect></svg></div>
-                      <div>
-                        <h4 class="font-semibold group-hover:text-primary transition-colors">Guarda il Webinar "ESG per PMI"</h4>
-                        <p class="text-xs text-white/40 mt-0.5">Webinar - 45 min</p>
-                      </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 group-hover:text-primary transition-colors flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TAPPA 3 -->
-            <div class="relative flex gap-5 cursor-pointer" onclick="openPanel(2)">
-              <div class="flex flex-col items-center">
-                <div class="w-11 h-11 rounded-full bg-white/5 border-2 border-white/10 flex items-center justify-center z-10"><span class="text-sm font-bold text-white/50">3</span></div>
-                <div class="w-0.5 flex-1 bg-white/10"></div>
-              </div>
-              <div class="flex-1 pb-4">
-                <div class="bg-card rounded-xl border border-white/10 p-5 hover:border-primary/30 transition-all group">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                      <div class="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5s6 3 6 3 6-3 6-3v-5"></path></svg></div>
-                      <div>
-                        <h4 class="font-semibold group-hover:text-primary transition-colors">Completa il corso "Fondamenti ESG"</h4>
-                        <p class="text-xs text-white/40 mt-0.5">Corso - 4 moduli</p>
-                      </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 group-hover:text-primary transition-colors flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TAPPA 4 -->
-            <div class="relative flex gap-5 cursor-pointer" onclick="openPanel(3)">
-              <div class="flex flex-col items-center">
-                <div class="w-11 h-11 rounded-full bg-white/5 border-2 border-white/10 flex items-center justify-center z-10"><span class="text-sm font-bold text-white/50">4</span></div>
-                <div class="w-0.5 flex-1 bg-white/10"></div>
-              </div>
-              <div class="flex-1 pb-4">
-                <div class="bg-card rounded-xl border border-white/10 p-5 hover:border-primary/30 transition-all group">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                      <div class="w-10 h-10 rounded-lg bg-red-500/15 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-red-400"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg></div>
-                      <div>
-                        <h4 class="font-semibold group-hover:text-primary transition-colors">Guarda un video dalla selezione Green Hub</h4>
-                        <p class="text-xs text-white/40 mt-0.5">Video YouTube - a scelta</p>
-                      </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 group-hover:text-primary transition-colors flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TAPPA 5 -->
-            <div class="relative flex gap-5 cursor-pointer" onclick="openPanel(4)">
-              <div class="flex flex-col items-center">
-                <div class="w-11 h-11 rounded-full bg-white/5 border-2 border-white/10 flex items-center justify-center z-10"><span class="text-sm font-bold text-white/50">5</span></div>
-              </div>
-              <div class="flex-1 pb-2">
-                <div class="bg-card rounded-xl border border-white/10 p-5 hover:border-primary/30 transition-all group">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                      <div class="w-10 h-10 rounded-lg bg-amber-500/15 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber-400"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
-                      <div>
-                        <h4 class="font-semibold group-hover:text-primary transition-colors">Acquista dal Marketplace Green Hub</h4>
-                        <p class="text-xs text-white/40 mt-0.5">Marketplace - 1 acquisto</p>
-                      </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 group-hover:text-primary transition-colors flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Traguardo finale -->
-          <div class="mt-6 p-5 rounded-xl bg-gradient-to-r from-primary/5 to-transparent border border-primary/10 flex items-center gap-4">
-            <div class="w-11 h-11 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"></path><path d="m9 12 2 2 4-4"></path></svg>
-            </div>
-            <div>
-              <div class="font-semibold text-white/70">Certificato IMPACT</div>
-              <div class="text-xs text-white/40">Completa tutte le tappe per sbloccarlo</div>
-            </div>
-          </div>
-
-        </div>
 
       </div>
     </div>
@@ -723,135 +576,8 @@
     <div class="absolute -top-1 -right-1 w-5 h-5 bg-[#FF6B35] rounded-full flex items-center justify-center"><span class="text-white text-xs font-bold">2</span></div>
   </button>
 
-  <!-- OVERLAY + PANNELLO LATERALE -->
-  <div class="slide-overlay" id="slideOverlay" onclick="closePanel()"></div>
-  <div class="slide-panel" id="slidePanel">
-    <div class="p-6">
-      <div class="flex items-center justify-between mb-6">
-        <h3 class="text-lg font-bold" id="panelTitle"></h3>
-        <button onclick="closePanel()" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/50"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-        </button>
-      </div>
-      <div id="panelContent"></div>
-    </div>
-  </div>
 
   <script>
-    // Dati tappe (intercambiabili, configurabili)
-    const tappeData = [
-      {
-        title: 'Leggi il Report ESG 2025',
-        type: 'Report',
-        duration: '15 min di lettura',
-        icon: 'blue',
-        description: 'Scopri lo stato della sostenibilita in Italia e i trend principali per le PMI nel report annuale Green Hub.',
-        details: [
-          { label: 'Formato', value: 'PDF - 24 pagine' },
-          { label: 'Pubblicato', value: 'Gennaio 2025' },
-          { label: 'Argomenti', value: 'Trend ESG, normativa, casi studio PMI' }
-        ],
-        cta: { text: 'Leggi il report', url: '#' }
-      },
-      {
-        title: 'Guarda il Webinar "ESG per PMI"',
-        type: 'Webinar',
-        duration: '45 minuti',
-        icon: 'purple',
-        description: 'Un webinar con esperti del settore che ti guida nei primi passi concreti verso la sostenibilita aziendale.',
-        details: [
-          { label: 'Relatori', value: 'Marco Bianchi, Anna Verdi' },
-          { label: 'Durata', value: '45 min + Q&A' },
-          { label: 'Argomenti', value: 'Primi passi ESG, obblighi normativi, opportunita' }
-        ],
-        cta: { text: 'Guarda il webinar', url: '#' }
-      },
-      {
-        title: 'Completa il corso "Fondamenti ESG"',
-        type: 'Corso',
-        duration: '4 moduli',
-        icon: 'emerald',
-        description: 'Il corso base della Green Hub Academy: 4 moduli per capire cosa sono i criteri ESG e come applicarli alla tua azienda.',
-        details: [
-          { label: 'Moduli', value: '4 moduli con quiz finale' },
-          { label: 'Durata totale', value: 'Circa 3 ore' },
-          { label: 'Certificazione', value: 'Attestato di completamento' }
-        ],
-        cta: { text: 'Inizia il corso', url: '#' }
-      },
-      {
-        title: 'Guarda un video dalla selezione Green Hub',
-        type: 'Video YouTube',
-        duration: 'A scelta',
-        icon: 'red',
-        description: 'Scegli uno dei video YouTube selezionati dal nostro team su temi di sostenibilita, economia circolare e innovazione green.',
-        details: [
-          { label: 'Video disponibili', value: '8 video selezionati' },
-          { label: 'Durata media', value: '10-20 min ciascuno' },
-          { label: 'Temi', value: 'Economia circolare, carbon footprint, supply chain green' }
-        ],
-        videos: [
-          { title: 'Cos\'e l\'economia circolare?', channel: 'Green Hub', duration: '12 min' },
-          { title: 'Carbon Footprint spiegato semplice', channel: 'Sostenibilita PMI', duration: '15 min' },
-          { title: 'ESG: da dove iniziare', channel: 'Green Hub', duration: '18 min' }
-        ],
-        cta: { text: 'Scegli un video', url: '#' }
-      },
-      {
-        title: 'Acquista dal Marketplace Green Hub',
-        type: 'Marketplace',
-        duration: '1 acquisto',
-        icon: 'amber',
-        description: 'Esplora il marketplace e acquista un servizio o prodotto sostenibile per la tua azienda. Consulenze, energia verde, forniture eco.',
-        details: [
-          { label: 'Categorie', value: 'Energia, consulenza, forniture, servizi' },
-          { label: 'Fornitori', value: '50+ verificati Green Hub' },
-          { label: 'Requisito', value: '1 acquisto qualsiasi' }
-        ],
-        cta: { text: 'Vai al marketplace', url: '#' }
-      }
-    ];
-
-    function openPanel(index) {
-      const t = tappeData[index];
-      document.getElementById('panelTitle').textContent = t.title;
-
-      let html = '<div class="space-y-6">';
-      // Badge tipo
-      html += '<div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">' + t.type + '</span><span class="text-xs text-white/40">' + t.duration + '</span></div>';
-      // Descrizione
-      html += '<p class="text-white/60 leading-relaxed">' + t.description + '</p>';
-      // Dettagli
-      html += '<div class="space-y-3">';
-      t.details.forEach(d => {
-        html += '<div class="flex items-start justify-between py-3 border-b border-white/5"><span class="text-sm text-white/40">' + d.label + '</span><span class="text-sm font-medium text-right max-w-[60%]">' + d.value + '</span></div>';
-      });
-      html += '</div>';
-      // Lista video (solo tappa 4)
-      if (t.videos) {
-        html += '<div><h4 class="text-sm font-semibold text-white/50 uppercase tracking-wider mb-3">Video disponibili</h4><div class="space-y-2">';
-        t.videos.forEach(v => {
-          html += '<div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"><div class="w-9 h-9 rounded-lg bg-red-500/15 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-red-400"><path d="m10 15 5-3-5-3z"></path></svg></div><div class="flex-1"><div class="text-sm font-medium">' + v.title + '</div><div class="text-xs text-white/40">' + v.channel + ' - ' + v.duration + '</div></div></div>';
-        });
-        html += '</div></div>';
-      }
-      // CTA
-      html += '<a href="' + t.cta.url + '" class="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-black font-semibold hover:bg-primary-dark transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>' + t.cta.text + '</a>';
-      html += '</div>';
-
-      document.getElementById('panelContent').innerHTML = html;
-      document.getElementById('slidePanel').classList.add('open');
-      document.getElementById('slideOverlay').classList.add('open');
-    }
-
-    function closePanel() {
-      document.getElementById('slidePanel').classList.remove('open');
-      document.getElementById('slideOverlay').classList.remove('open');
-    }
-
-    // Chiudi con Escape
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
-
     let currentView = 'member';
 
     function switchView(mode) {
@@ -880,13 +606,6 @@
       if (isPublic) { toggle.classList.remove('bg-white/20'); toggle.classList.add('bg-primary'); dot.style.right='2px'; dot.style.left='auto'; label.textContent='Pubblica'; }
       else { toggle.classList.remove('bg-primary'); toggle.classList.add('bg-white/20'); dot.style.left='2px'; dot.style.right='auto'; label.textContent='Privata'; }
     });
-
-    function memberNotify(btn) {
-      btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Ti avviseremo!';
-      btn.classList.remove('bg-primary', 'hover:bg-primary-dark');
-      btn.classList.add('bg-primary/20', 'text-primary', 'border', 'border-primary/30', 'cursor-default');
-      btn.disabled = true;
-    }
 
     function copyLink() {
       navigator.clipboard.writeText('https://thegreenhub.org/impact/GH-2026-4827');
