@@ -251,42 +251,21 @@
 
             <h2 class="text-2xl md:text-3xl font-bold mb-4">Certificato IMPACT</h2>
 
-            <p class="text-white/60 leading-relaxed max-w-lg mx-auto mb-8">
-              Qui rilasceremo i <strong class="text-white">certificati Green Hub</strong> che attestano la tua consapevolezza e il tuo impegno sui temi della sostenibilita. Potrai inserirli nei tuoi canali: pagina aziendale, firma email, profilo LinkedIn e molto altro.
+            <p class="text-white/60 leading-relaxed max-w-lg mx-auto mb-4">
+              Stiamo lavorando a qualcosa di nuovo per te: i <strong class="text-white">Certificati IMPACT Green Hub</strong>, che attesteranno la consapevolezza e l'impegno della tua azienda sui temi della sostenibilita.
             </p>
 
-            <div class="w-16 h-px bg-white/10 mx-auto mb-8"></div>
+            <p class="text-white/50 leading-relaxed max-w-lg mx-auto mb-10">
+              Potrai inserirli nei tuoi canali — pagina aziendale, firma email, profilo LinkedIn — e condividerli con clienti e partner. Stiamo definendo i percorsi per ottenerli e ti aggiorneremo appena saranno disponibili.
+            </p>
 
-            <h3 class="text-sm font-semibold text-white/40 uppercase tracking-wider mb-5">Come ottenerlo</h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-xl mx-auto mb-10">
-              <div class="p-5 rounded-xl bg-white/5 border border-white/5">
-                <div class="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center mx-auto mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5s6 3 6 3 6-3 6-3v-5"></path></svg>
-                </div>
-                <div class="text-sm font-semibold mb-1">Corsi</div>
-                <div class="text-xs text-white/40">Completa i percorsi formativi ESG</div>
-              </div>
-              <div class="p-5 rounded-xl bg-white/5 border border-white/5">
-                <div class="w-10 h-10 rounded-lg bg-amber-500/15 flex items-center justify-center mx-auto mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber-400"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
-                </div>
-                <div class="text-sm font-semibold mb-1">Camp & Eventi</div>
-                <div class="text-xs text-white/40">Partecipa alle attivita Green Hub</div>
-              </div>
-              <div class="p-5 rounded-xl bg-white/5 border border-white/5">
-                <div class="w-10 h-10 rounded-lg bg-blue-500/15 flex items-center justify-center mx-auto mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-400"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                </div>
-                <div class="text-sm font-semibold mb-1">Viaggi Business</div>
-                <div class="text-xs text-white/40">Esplora il network sostenibile</div>
-              </div>
+            <div class="max-w-sm mx-auto">
+              <button onclick="memberNotify(this)" class="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-primary text-black font-semibold hover:bg-primary-dark transition-all text-base">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+                Avvisami quando e disponibile
+              </button>
+              <p class="text-xs text-white/30 mt-3 text-center">Nessuno spam — solo un avviso quando il certificato sara pronto per te.</p>
             </div>
-
-            <a href="#" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-primary text-black font-semibold hover:bg-primary-dark transition-all">
-              Inizia il tuo percorso
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </a>
 
           </div>
         </div>
@@ -622,6 +601,13 @@
       if (isPublic) { toggle.classList.remove('bg-white/20'); toggle.classList.add('bg-primary'); dot.style.right='2px'; dot.style.left='auto'; label.textContent='Pubblica'; }
       else { toggle.classList.remove('bg-primary'); toggle.classList.add('bg-white/20'); dot.style.left='2px'; dot.style.right='auto'; label.textContent='Privata'; }
     });
+
+    function memberNotify(btn) {
+      btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Ti avviseremo!';
+      btn.classList.remove('bg-primary', 'hover:bg-primary-dark');
+      btn.classList.add('bg-primary/20', 'text-primary', 'border', 'border-primary/30', 'cursor-default');
+      btn.disabled = true;
+    }
 
     function copyLink() {
       navigator.clipboard.writeText('https://thegreenhub.org/impact/GH-2026-4827');
