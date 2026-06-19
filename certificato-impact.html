@@ -376,7 +376,20 @@
     function shareLinkedIn() {
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://thegreenhub.org/impact/GH-2026-4827')}`, '_blank', 'width=600,height=500');
     }
+
+    function resetPercorso() {
+      localStorage.removeItem('gh_percorso');
+      localStorage.removeItem('gh_preferences');
+      window.location.href = 'percorso.html';
+    }
   </script>
+
+  <!-- Dev: reset percorso -->
+  <div class="fixed bottom-8 left-28 z-30">
+    <button onclick="resetPercorso()" class="text-xs text-white/20 hover:text-white/40 transition-colors underline underline-offset-2 bg-black/50 px-3 py-1.5 rounded-lg">
+      Demo: resetta percorso
+    </button>
+  </div>
 
 </body>
 </html>

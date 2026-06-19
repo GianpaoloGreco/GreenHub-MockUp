@@ -1,1 +1,4 @@
 id,tipo,area,titolo,stato,priorita,size
+001,feature,certificato,Percorso IMPACT: flusso step sequenziali per sblocco certificato livello 1,todo,P1,L
+002,feature,gamification,Gamification: ristrutturazione con Punti GH e traguardi collettivi,todo,P1,L
+003,feature,news,News: integrazione articoli da JSON e newsletter Brevo,todo,P1,M

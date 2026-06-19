@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenHub - My IMPACT Dashboard</title>
+  <title>GreenHub - Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
   tailwind.config = {
@@ -23,6 +23,7 @@
   <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
   body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  .roadmap-line { position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: #2A2A2A; }
   </style>
 </head>
 <body class="bg-black text-white min-h-screen">
@@ -30,7 +31,7 @@
   <!-- Sidebar -->
   <div class="fixed left-0 top-0 h-screen w-20 bg-black border-r border-white/10 flex flex-col items-center py-6 z-50">
     <div class="mb-8">
-      <img src="https://thegreenhub.org/wp-content/uploads/2025/02/cropped-logo-green-e1761402025428.png" alt="Green Hub" class="w-12 h-12 object-contain">
+      <img src="https://thegreenhub.org/wp-content/uploads/2025/02/cropped-logo-green-e1761402025428.png" alt="GreenHub" class="w-12 h-12 object-contain">
     </div>
     <nav class="flex flex-col gap-4 mb-8">
       <a class="relative w-12 h-12 rounded-lg flex items-center justify-center text-white/70 hover:text-white hover:bg-white/5" title="Home" href="home.html">
@@ -77,10 +78,10 @@
 
   <!-- Header -->
   <div class="absolute right-6 top-6 z-40 flex items-center gap-4">
-    <button class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[#1A1A1A] border border-transparent hover:border-white/10 transition-all group">
-      <div class="w-10 h-10 rounded-full bg-[#10B981] text-black font-black flex items-center justify-center">GG</div>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-card border border-transparent hover:border-white/10 transition-all group">
+      <div class="w-10 h-10 rounded-full bg-primary text-black font-black flex items-center justify-center">GG</div>
       <div class="hidden lg:block text-left">
-        <div class="text-sm font-semibold text-white group-hover:text-[#10B981] transition-colors">Gianpaolo Greco</div>
+        <div class="text-sm font-semibold text-white group-hover:text-primary transition-colors">Gianpaolo Greco</div>
         <div class="text-xs text-white/50">gianpaologreco@gmail.com</div>
       </div>
     </button>
@@ -92,132 +93,211 @@
 
       <!-- Titolo -->
       <div class="mb-8">
-        <h1 class="text-3xl font-bold mb-2">My IMPACT Dashboard</h1>
-        <p class="text-white/50 text-lg">Monitora i tuoi progressi e raggiungi i tuoi obiettivi</p>
+        <h1 class="text-3xl font-bold mb-2">Dashboard</h1>
+        <p class="text-white/50">La tua attivita su GreenHub e il contributo collettivo</p>
       </div>
 
-      <!-- 4 Stat Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <!-- XP Totali -->
+      <!-- 3 Stat Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <!-- Punti GH -->
         <div class="bg-card border border-card-border rounded-xl p-5">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M12 22c4.97 0 9-2.24 9-5v-4l-3-3-3 3v3H9v-3L6 10v4c0 2.76 4.03 5 9 5z"></path><path d="M12 2C7.03 2 3 4.24 3 7v4l3 3 3-3V8h6v3l3-3V7c0-2.76-4.03-5-9-5z"></path></svg>
             </div>
-            <span class="text-white/50 text-xs font-semibold uppercase tracking-wider">XP Totali</span>
+            <span class="text-white/50 text-xs font-semibold uppercase tracking-wider">I tuoi Punti GH</span>
           </div>
-          <div class="text-4xl font-bold mb-1">25</div>
-          <div class="text-sm text-primary font-medium">Livello Seed</div>
+          <div class="text-4xl font-bold mb-1">85</div>
+          <div class="text-sm text-white/50">punti contribuiti al traguardo</div>
         </div>
 
-        <!-- Streak -->
+        <!-- Missioni completate -->
         <div class="bg-card border border-card-border rounded-xl p-5">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
             </div>
-            <span class="text-white/50 text-xs font-semibold uppercase tracking-wider">Streak</span>
+            <span class="text-white/50 text-xs font-semibold uppercase tracking-wider">Missioni</span>
           </div>
-          <div class="text-4xl font-bold mb-1">2</div>
-          <div class="text-sm text-white/50">giorni consecutivi - 5gg al bonus</div>
+          <div class="text-4xl font-bold mb-1">4<span class="text-xl text-white/40">/6</span></div>
+          <div class="text-sm text-white/50">completate questa settimana</div>
         </div>
 
-        <!-- Green Credits -->
+        <!-- Certificato -->
         <div class="bg-card border border-card-border rounded-xl p-5">
           <div class="flex items-center gap-3 mb-3">
             <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 18V6"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"></path><path d="m9 12 2 2 4-4"></path></svg>
             </div>
-            <span class="text-white/50 text-xs font-semibold uppercase tracking-wider">Green Credits</span>
+            <span class="text-white/50 text-xs font-semibold uppercase tracking-wider">Certificato</span>
           </div>
-          <div class="text-4xl font-bold mb-1">25</div>
-          <div class="text-sm text-white/50">Spendibili per benefici</div>
-        </div>
-
-        <!-- Badge -->
-        <div class="bg-card border border-card-border rounded-xl p-5">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"></path></svg>
-            </div>
-            <span class="text-white/50 text-xs font-semibold uppercase tracking-wider">Badge</span>
-          </div>
-          <div class="text-4xl font-bold mb-1">2<span class="text-xl text-white/40">/21</span></div>
-          <div class="text-sm text-white/50">badge sbloccati</div>
+          <div class="text-lg font-bold mb-1 text-primary">IMPACT attivo</div>
+          <a href="certificato-impact.html" class="text-sm text-white/50 hover:text-primary transition-colors">Vedi il tuo certificato &rarr;</a>
         </div>
       </div>
 
-      <!-- Barra Progresso Livello -->
-      <div class="bg-card border border-card-border rounded-xl p-5 mb-6">
-        <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-2">
-            <span class="text-sm font-semibold text-white">Livello Seed</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/40"><path d="m9 18 6-6-6-6"></path></svg>
-            <span class="text-sm font-semibold text-white">Sprout</span>
+      <!-- ===== BARRA COLLETTIVA + ROADMAP ===== -->
+      <div class="bg-card border border-card-border rounded-xl p-6 mb-6">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h3 class="text-lg font-bold mb-1">Traguardo Collettivo</h3>
+            <p class="text-sm text-white/40">Ogni azione sulla piattaforma avvicina il prossimo traguardo. Tutti ne beneficiano.</p>
           </div>
-          <span class="text-sm font-bold text-primary">5%</span>
+          <div class="text-right flex-shrink-0 ml-4">
+            <div class="text-2xl font-black text-primary">1.247</div>
+            <div class="text-xs text-white/40">punti GH totali</div>
+          </div>
         </div>
-        <div class="h-3 bg-card-border rounded-full overflow-hidden mb-2">
-          <div class="h-full bg-primary rounded-full transition-all" style="width: 5%"></div>
+
+        <!-- Barra collettiva -->
+        <div class="mb-2">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-xs text-white/50">Prossimo traguardo: <span class="text-white font-semibold">2.000 punti GH</span></span>
+            <span class="text-xs text-primary font-semibold">62%</span>
+          </div>
+          <div class="w-full h-4 bg-black/50 rounded-full overflow-hidden border border-white/5">
+            <div class="h-full rounded-full bg-gradient-to-r from-emerald-600 via-primary to-emerald-300 transition-all duration-1000" style="width: 62%;"></div>
+          </div>
         </div>
-        <div class="flex items-center justify-between">
-          <span class="text-xs text-white/40">25 XP</span>
-          <span class="text-xs text-white/40">500 XP per Sprout</span>
+
+        <!-- Prossima azione -->
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-black/30 border border-white/5 mt-4 mb-5">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><path d="M12 22c4.97 0 9-2.24 9-5v-4l-3-3-3 3v3H9v-3L6 10v4c0 2.76 4.03 5 9 5z"></path><path d="M12 2C7.03 2 3 4.24 3 7v4l3 3 3-3V8h6v3l3-3V7c0-2.76-4.03-5-9-5z"></path></svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm font-semibold text-white/90">Al traguardo: GreenHub piantera 200 alberi certificati</p>
+            <p class="text-xs text-white/40">L'azione entrera nel certificato di ogni azienda che ha contribuito</p>
+          </div>
+        </div>
+
+        <!-- Roadmap visuale -->
+        <div class="relative px-4 py-6">
+          <div class="roadmap-line"></div>
+          <div class="relative flex items-center justify-between">
+            <!-- Traguardo 1 - raggiunto -->
+            <div class="flex flex-col items-center z-10">
+              <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mb-2 ring-4 ring-black">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-black"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span class="text-[10px] font-bold text-primary">500 GH</span>
+              <span class="text-[10px] text-white/40 text-center mt-0.5 max-w-[80px]">50 alberi piantati</span>
+            </div>
+            <!-- Traguardo 2 - raggiunto -->
+            <div class="flex flex-col items-center z-10">
+              <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mb-2 ring-4 ring-black">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-black"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span class="text-[10px] font-bold text-primary">1.000 GH</span>
+              <span class="text-[10px] text-white/40 text-center mt-0.5 max-w-[80px]">2 ton CO2 compensate</span>
+            </div>
+            <!-- Traguardo 3 - in corso -->
+            <div class="flex flex-col items-center z-10">
+              <div class="w-10 h-10 rounded-full bg-card border-2 border-primary flex items-center justify-center mb-2 ring-4 ring-black animate-pulse">
+                <span class="text-primary font-bold text-xs">62%</span>
+              </div>
+              <span class="text-[10px] font-bold text-white">2.000 GH</span>
+              <span class="text-[10px] text-white/40 text-center mt-0.5 max-w-[80px]">200 alberi certificati</span>
+            </div>
+            <!-- Traguardo 4 - futuro -->
+            <div class="flex flex-col items-center z-10">
+              <div class="w-10 h-10 rounded-full bg-card border border-white/10 flex items-center justify-center mb-2 ring-4 ring-black">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <span class="text-[10px] font-bold text-white/30">5.000 GH</span>
+              <span class="text-[10px] text-white/20 text-center mt-0.5 max-w-[80px]">Borsa di studio green</span>
+            </div>
+            <!-- Traguardo 5 - futuro -->
+            <div class="flex flex-col items-center z-10">
+              <div class="w-10 h-10 rounded-full bg-card border border-white/10 flex items-center justify-center mb-2 ring-4 ring-black">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <span class="text-[10px] font-bold text-white/30">10.000 GH</span>
+              <span class="text-[10px] text-white/20 text-center mt-0.5 max-w-[80px]">Da scoprire</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donazione + Azione personalizzata -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+          <div class="flex items-center gap-4 p-4 rounded-xl bg-black/20 border border-white/5">
+            <div class="flex-1">
+              <p class="text-sm text-white/60">Vuoi contribuire maggiormente? <span class="text-white font-semibold">Aggiungi punti GH con una donazione</span> e ottieni una certificazione aggiuntiva.</p>
+            </div>
+            <button class="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-semibold hover:bg-primary/20 transition-all flex-shrink-0">
+              Dona ora
+            </button>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-xl bg-black/20 border border-white/5">
+            <div class="flex-1">
+              <p class="text-sm text-white/60">Vuoi un'azione dedicata alla tua azienda? <span class="text-white font-semibold">Scegli dal Marketplace</span>: alberi a tuo nome, compensazione CO2, progetti su misura.</p>
+            </div>
+            <a href="marketplace.html" class="px-4 py-2 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm font-semibold hover:bg-amber-500/20 transition-all flex-shrink-0">
+              Esplora
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Due colonne -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
 
-        <!-- Colonna sinistra - Checklist Settimanale (2/3) -->
+        <!-- Colonna sinistra - Missioni (2/3) -->
         <div class="lg:col-span-2">
           <div class="bg-card border border-card-border rounded-xl">
             <div class="flex items-center justify-between p-5 border-b border-card-border">
-              <h3 class="text-lg font-semibold">Checklist Settimanale</h3>
-              <span class="text-sm text-white/40 font-medium">0/6</span>
+              <div>
+                <h3 class="text-lg font-semibold">Missioni della settimana</h3>
+                <p class="text-xs text-white/40 mt-0.5">Ogni missione completata aggiunge punti GH al traguardo collettivo</p>
+              </div>
+              <span class="text-sm text-white/40 font-medium">4/6</span>
             </div>
             <div class="divide-y divide-card-border">
-              <!-- Task 1 -->
-              <div class="flex items-center gap-4 px-5 py-4 hover:bg-card-light transition-colors cursor-pointer group">
-                <div class="w-6 h-6 rounded-full border-2 border-white/20 flex-shrink-0 group-hover:border-primary transition-colors"></div>
-                <span class="flex-1 text-sm text-white/80">Leggi un articolo news</span>
-                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+10 XP</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
+              <!-- Missione 1 - completata -->
+              <div class="flex items-center gap-4 px-5 py-4 opacity-60">
+                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-black"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="flex-1 text-sm text-white/80 line-through">Leggi un articolo dalla sezione News</span>
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+5 GH</span>
               </div>
-              <!-- Task 2 -->
-              <div class="flex items-center gap-4 px-5 py-4 hover:bg-card-light transition-colors cursor-pointer group">
-                <div class="w-6 h-6 rounded-full border-2 border-white/20 flex-shrink-0 group-hover:border-primary transition-colors"></div>
-                <span class="flex-1 text-sm text-white/80">Condividi un contenuto</span>
-                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+20 XP</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
+              <!-- Missione 2 - completata -->
+              <div class="flex items-center gap-4 px-5 py-4 opacity-60">
+                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-black"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="flex-1 text-sm text-white/80 line-through">Scarica un documento dal Toolkit</span>
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+10 GH</span>
               </div>
-              <!-- Task 3 -->
-              <div class="flex items-center gap-4 px-5 py-4 hover:bg-card-light transition-colors cursor-pointer group">
-                <div class="w-6 h-6 rounded-full border-2 border-white/20 flex-shrink-0 group-hover:border-primary transition-colors"></div>
-                <span class="flex-1 text-sm text-white/80">Richiedi un preventivo</span>
-                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+50 XP</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
+              <!-- Missione 3 - completata -->
+              <div class="flex items-center gap-4 px-5 py-4 opacity-60">
+                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-black"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="flex-1 text-sm text-white/80 line-through">Guarda un video dalla selezione YouTube</span>
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+5 GH</span>
               </div>
-              <!-- Task 4 -->
-              <div class="flex items-center gap-4 px-5 py-4 hover:bg-card-light transition-colors cursor-pointer group">
-                <div class="w-6 h-6 rounded-full border-2 border-white/20 flex-shrink-0 group-hover:border-primary transition-colors"></div>
-                <span class="flex-1 text-sm text-white/80">Scarica un toolkit</span>
-                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+20 XP</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
+              <!-- Missione 4 - completata -->
+              <div class="flex items-center gap-4 px-5 py-4 opacity-60">
+                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-black"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="flex-1 text-sm text-white/80 line-through">Salva un'opportunita tra i preferiti</span>
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+5 GH</span>
               </div>
-              <!-- Task 5 -->
+              <!-- Missione 5 - da fare -->
               <div class="flex items-center gap-4 px-5 py-4 hover:bg-card-light transition-colors cursor-pointer group">
                 <div class="w-6 h-6 rounded-full border-2 border-white/20 flex-shrink-0 group-hover:border-primary transition-colors"></div>
-                <span class="flex-1 text-sm text-white/80">Guarda una Success Story</span>
-                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+10 XP</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
+                <span class="flex-1 text-sm text-white/80">Partecipa a un evento o webinar</span>
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+15 GH</span>
+                <a href="eventi.html" class="text-white/20 hover:text-white/60 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></a>
               </div>
-              <!-- Task 6 -->
+              <!-- Missione 6 - da fare -->
               <div class="flex items-center gap-4 px-5 py-4 hover:bg-card-light transition-colors cursor-pointer group">
                 <div class="w-6 h-6 rounded-full border-2 border-white/20 flex-shrink-0 group-hover:border-primary transition-colors"></div>
-                <span class="flex-1 text-sm text-white/80">Guarda un video YouTube</span>
-                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+10 XP</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20 flex-shrink-0"><path d="m9 18 6-6-6-6"></path></svg>
+                <span class="flex-1 text-sm text-white/80">Richiedi un preventivo sul Marketplace</span>
+                <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">+20 GH</span>
+                <a href="marketplace.html" class="text-white/20 hover:text-white/60 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></a>
               </div>
             </div>
           </div>
@@ -226,14 +306,41 @@
         <!-- Colonna destra (1/3) -->
         <div class="flex flex-col gap-6">
 
-          <!-- Streak Card -->
-          <div class="bg-card border border-card-border rounded-xl p-6 text-center">
-            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+          <!-- Traguardi sbloccati -->
+          <div class="bg-card border border-card-border rounded-xl p-5">
+            <div class="flex items-center gap-2 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+              <h3 class="text-base font-semibold">Nel tuo certificato</h3>
             </div>
-            <div class="text-5xl font-bold mb-1">2</div>
-            <div class="text-sm text-white/50 mb-3">giorni consecutivi</div>
-            <div class="text-xs text-white/40">5 giorni al bonus 7gg (+25 Credits)</div>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
+                <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-white/80">50 alberi piantati</p>
+                  <p class="text-[10px] text-white/30">Traguardo 500 GH</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10">
+                <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-white/80">2 ton CO2 compensate</p>
+                  <p class="text-[10px] text-white/30">Traguardo 1.000 GH</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-lg bg-white/[0.02] border border-white/5">
+                <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-white/40">200 alberi certificati</p>
+                  <p class="text-[10px] text-white/20">In corso - 62%</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Prossime Scadenze -->
@@ -243,7 +350,6 @@
               <h3 class="text-base font-semibold">Prossime Scadenze</h3>
             </div>
             <div class="space-y-3">
-              <!-- Scadenza 1 -->
               <div class="flex items-start gap-3">
                 <div class="w-1 self-stretch bg-primary rounded-full flex-shrink-0 mt-1"></div>
                 <div class="flex-1 min-w-0">
@@ -251,7 +357,6 @@
                 </div>
                 <span class="px-2 py-1 rounded bg-card-light text-xs text-white/60 font-medium flex-shrink-0 whitespace-nowrap">23 giu</span>
               </div>
-              <!-- Scadenza 2 -->
               <div class="flex items-start gap-3">
                 <div class="w-1 self-stretch bg-primary rounded-full flex-shrink-0 mt-1"></div>
                 <div class="flex-1 min-w-0">
@@ -259,11 +364,10 @@
                 </div>
                 <span class="px-2 py-1 rounded bg-card-light text-xs text-white/60 font-medium flex-shrink-0 whitespace-nowrap">31 lug</span>
               </div>
-              <!-- Scadenza 3 -->
               <div class="flex items-start gap-3">
                 <div class="w-1 self-stretch bg-primary rounded-full flex-shrink-0 mt-1"></div>
                 <div class="flex-1 min-w-0">
-                  <p class="text-xs text-white/80 leading-snug">Certificazione della Parita di Genere - UNI/PdR 125:2022 (Sistema Unioncamere)</p>
+                  <p class="text-xs text-white/80 leading-snug">Certificazione della Parita di Genere - UNI/PdR 125:2022</p>
                 </div>
                 <span class="px-2 py-1 rounded bg-card-light text-xs text-white/60 font-medium flex-shrink-0 whitespace-nowrap">31 dic</span>
               </div>
@@ -273,19 +377,34 @@
         </div>
       </div>
 
-      <!-- IMPACT Maturity Score (placeholder) -->
+      <!-- La tua attivita -->
       <div class="bg-card border border-card-border rounded-xl p-6">
         <div class="flex items-center gap-3 mb-4">
           <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
           </div>
           <div>
-            <h3 class="text-lg font-semibold">IMPACT Maturity Score</h3>
-            <p class="text-sm text-white/40">Valutazione del tuo livello di maturita sostenibile</p>
+            <h3 class="text-lg font-semibold">La tua attivita su GreenHub</h3>
+            <p class="text-sm text-white/40">Riepilogo di cosa hai fatto sulla piattaforma</p>
           </div>
         </div>
-        <div class="h-32 bg-card-light border border-card-border rounded-lg flex items-center justify-center">
-          <span class="text-white/20 text-sm">Completa piu attivita per sbloccare il tuo score</span>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="bg-black/30 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold mb-1">12</div>
+            <div class="text-xs text-white/40">Articoli letti</div>
+          </div>
+          <div class="bg-black/30 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold mb-1">3</div>
+            <div class="text-xs text-white/40">Documenti scaricati</div>
+          </div>
+          <div class="bg-black/30 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold mb-1">2</div>
+            <div class="text-xs text-white/40">Eventi seguiti</div>
+          </div>
+          <div class="bg-black/30 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold mb-1">5</div>
+            <div class="text-xs text-white/40">Opportunita salvate</div>
+          </div>
         </div>
       </div>
 
