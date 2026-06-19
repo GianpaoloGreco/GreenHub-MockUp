@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenHub - Toolkit</title>
+  <title>Toolkit Documenti - Green Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
   tailwind.config = {
@@ -15,7 +15,7 @@
   body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
   </style>
 </head>
-<body class="bg-black text-white min-h-screen">
+<body class="min-h-screen bg-black text-white">
 
   <!-- SIDEBAR -->
   <div class="fixed left-0 top-0 h-screen w-20 bg-black border-r border-white/10 flex flex-col items-center py-6 z-50">
@@ -66,257 +66,184 @@
     </nav>
   </div>
 
+  <!-- HEADER -->
+  <div class="absolute right-6 top-6 z-40 flex items-center gap-4">
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-card border border-transparent hover:border-white/10 transition-all group">
+      <div class="w-10 h-10 rounded-full bg-primary text-black font-black flex items-center justify-center">GG</div>
+      <div class="hidden lg:block text-left">
+        <div class="text-sm font-semibold text-white group-hover:text-primary transition-colors">Gianpaolo Greco</div>
+        <div class="text-xs text-white/50">gianpaologreco@gmail.com</div>
+      </div>
+    </button>
+  </div>
+
   <!-- MAIN CONTENT -->
-  <div class="ml-20 min-h-screen">
-    <!-- HEADER -->
-    <header class="h-16 border-b border-card-border flex items-center justify-end px-8">
-      <div class="flex items-center gap-3">
-        <div class="text-right">
-          <p class="text-sm font-medium">Gianpaolo Greco</p>
-          <p class="text-xs text-white/50">gianpaologreco@gmail.com</p>
-        </div>
-        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm">GG</div>
+  <div class="ml-20 min-h-screen p-8">
+    <!-- Page Header -->
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold text-white mb-2">Toolkit Documenti</h1>
+      <p class="text-white/50">Template, guide e strumenti operativi per la tua strategia ESG</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex gap-3 mb-6">
+      <div class="relative flex-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/30"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <input type="text" placeholder="Cerca documenti..." class="w-full bg-card border border-card-border rounded-xl py-3 pl-12 pr-4 text-sm text-white placeholder-white/30 focus:outline-none focus:border-primary/50">
       </div>
-    </header>
+      <button class="px-5 py-3 bg-card border border-card-border rounded-xl text-sm text-white/70 hover:text-white hover:border-white/20 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+        Filtri
+      </button>
+    </div>
 
-    <!-- PAGE CONTENT -->
-    <div class="p-8 flex gap-8">
-      <!-- MAIN AREA -->
-      <div class="flex-1">
-        <div class="mb-8">
-          <h1 class="text-3xl font-bold mb-2">Toolkit</h1>
-          <p class="text-white/60">Strumenti e risorse per la sostenibilita aziendale</p>
-        </div>
+    <!-- Filter Pills -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-primary text-black">Tutti</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Compliance</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Reporting</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Certificazioni</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Strumenti</button>
+      <button class="px-4 py-2 rounded-full text-sm font-medium bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20">Opportunita</button>
+    </div>
 
-        <!-- FILTERS -->
-        <div class="flex gap-3 mb-8">
-          <button class="px-4 py-2 rounded-lg bg-primary text-black font-medium text-sm">Tutti</button>
-          <button class="px-4 py-2 rounded-lg bg-card border border-card-border text-white/70 hover:text-white text-sm">Template</button>
-          <button class="px-4 py-2 rounded-lg bg-card border border-card-border text-white/70 hover:text-white text-sm">Guide</button>
-          <button class="px-4 py-2 rounded-lg bg-card border border-card-border text-white/70 hover:text-white text-sm">Calcolatori</button>
-          <button class="px-4 py-2 rounded-lg bg-card border border-card-border text-white/70 hover:text-white text-sm">Checklist</button>
-        </div>
+    <!-- Documents Grid 4 columns -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mb-10">
 
-        <!-- GRID -->
-        <div class="grid grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
-              </div>
-              <span class="px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-500 text-xs font-medium">Popolare</span>
-            </div>
-            <h3 class="font-semibold mb-1">Template Report ESG</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 text-xs">Template</span>
-              <span class="text-white/40 text-xs">PDF</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Modello completo per la redazione del report ESG conforme agli standard europei. Scaricato 340 volte.</p>
-            <button class="w-full py-2 rounded-lg bg-primary/10 text-primary font-medium text-sm hover:bg-primary/20 transition-colors">Scarica</button>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
-              </div>
-              <span class="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">Aggiornata</span>
-            </div>
-            <h3 class="font-semibold mb-1">Guida CSRD per PMI</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 text-xs">Guida</span>
-              <span class="text-white/40 text-xs">PDF - 18 pag</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Guida pratica alla direttiva CSRD per piccole e medie imprese. Aggiornata Maggio 2026.</p>
-            <button class="w-full py-2 rounded-lg bg-primary/10 text-primary font-medium text-sm hover:bg-primary/20 transition-colors">Scarica</button>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M12 18h.01"></path><path d="M8 6h8"></path><path d="M8 10h8"></path><path d="M8 14h4"></path></svg>
-              </div>
-            </div>
-            <h3 class="font-semibold mb-1">Calcolatore Carbon Footprint</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-green-500/10 text-green-400 text-xs">Calcolatore</span>
-              <span class="text-white/40 text-xs">Online - Interattivo</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Calcola l'impronta di carbonio della tua azienda in modo semplice e guidato. Risultati in tempo reale.</p>
-            <button class="w-full py-2 rounded-lg bg-primary text-black font-medium text-sm hover:bg-primary-dark transition-colors">Usa online</button>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-              </div>
-            </div>
-            <h3 class="font-semibold mb-1">Checklist Audit Energetico</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 text-xs">Checklist</span>
-              <span class="text-white/40 text-xs">PDF - 12 punti</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Lista di controllo completa per verificare l'efficienza energetica della tua sede aziendale.</p>
-            <button class="w-full py-2 rounded-lg bg-primary/10 text-primary font-medium text-sm hover:bg-primary/20 transition-colors">Scarica</button>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
-              </div>
-            </div>
-            <h3 class="font-semibold mb-1">Template Piano di Sostenibilita</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 text-xs">Template</span>
-              <span class="text-white/40 text-xs">DOCX - Personalizzabile</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Struttura il piano di sostenibilita della tua azienda con obiettivi, KPI e timeline predefiniti.</p>
-            <button class="w-full py-2 rounded-lg bg-primary/10 text-primary font-medium text-sm hover:bg-primary/20 transition-colors">Scarica</button>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
-              </div>
-              <span class="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">Aggiornata</span>
-            </div>
-            <h3 class="font-semibold mb-1">Guida ai Bandi Green 2026</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 text-xs">Guida</span>
-              <span class="text-white/40 text-xs">PDF - 32 pag</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Panoramica completa dei bandi e incentivi green disponibili nel 2026. Aggiornata Giugno 2026.</p>
-            <button class="w-full py-2 rounded-lg bg-primary/10 text-primary font-medium text-sm hover:bg-primary/20 transition-colors">Scarica</button>
-          </div>
-
-          <!-- Card 7 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M12 18h.01"></path><path d="M8 6h8"></path><path d="M8 10h8"></path><path d="M8 14h4"></path></svg>
-              </div>
-            </div>
-            <h3 class="font-semibold mb-1">Calcolatore ROI Pannelli Solari</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-green-500/10 text-green-400 text-xs">Calcolatore</span>
-              <span class="text-white/40 text-xs">Online</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Stima il ritorno sull'investimento per l'installazione di pannelli fotovoltaici nella tua azienda.</p>
-            <button class="w-full py-2 rounded-lg bg-primary text-black font-medium text-sm hover:bg-primary-dark transition-colors">Usa online</button>
-          </div>
-
-          <!-- Card 8 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-              </div>
-            </div>
-            <h3 class="font-semibold mb-1">Checklist Compliance ESG</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 text-xs">Checklist</span>
-              <span class="text-white/40 text-xs">PDF - 20 punti</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Verifica la conformita della tua azienda ai principali requisiti ESG con questa checklist dettagliata.</p>
-            <button class="w-full py-2 rounded-lg bg-primary/10 text-primary font-medium text-sm hover:bg-primary/20 transition-colors">Scarica</button>
-          </div>
-
-          <!-- Card 9 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-primary/30 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
-              </div>
-            </div>
-            <h3 class="font-semibold mb-1">Template Bilancio di Sostenibilita</h3>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 text-xs">Template</span>
-              <span class="text-white/40 text-xs">XLSX</span>
-            </div>
-            <p class="text-white/50 text-sm mb-4">Foglio di calcolo strutturato per compilare il bilancio di sostenibilita con indicatori GRI.</p>
-            <button class="w-full py-2 rounded-lg bg-primary/10 text-primary font-medium text-sm hover:bg-primary/20 transition-colors">Scarica</button>
+      <!-- Doc 1 - Policy Privacy GDPR ESG -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <!-- PDF icon -->
+          <div class="relative w-10 h-12 bg-red-500/10 rounded flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+            <span class="absolute -bottom-1 -right-1 px-1 py-0.5 bg-red-500 rounded text-[8px] font-bold text-white leading-none">PDF</span>
           </div>
         </div>
+        <h3 class="text-sm font-semibold text-white mb-1">Policy Privacy GDPR ESG</h3>
+        <p class="text-xs text-white/40 mb-1">Compliance</p>
+        <p class="text-xs text-white/30 mb-4">245 KB</p>
+        <button class="w-full py-2 rounded-lg bg-primary text-black font-medium text-sm hover:bg-primary-dark transition-colors">Scarica</button>
       </div>
 
-      <!-- RIGHT SIDEBAR -->
-      <div class="w-72 shrink-0">
-        <div class="bg-card border border-card-border rounded-xl p-6 mb-6">
-          <h3 class="font-semibold mb-4">Scaricate di recente</h3>
-          <div class="space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded bg-blue-500/10 flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
-              </div>
-              <div>
-                <p class="text-sm font-medium">Template Report ESG</p>
-                <p class="text-xs text-white/40">2 giorni fa</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded bg-purple-500/10 flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
-              </div>
-              <div>
-                <p class="text-sm font-medium">Guida CSRD per PMI</p>
-                <p class="text-xs text-white/40">5 giorni fa</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded bg-orange-500/10 flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-              </div>
-              <div>
-                <p class="text-sm font-medium">Checklist Audit Energetico</p>
-                <p class="text-xs text-white/40">1 settimana fa</p>
-              </div>
-            </div>
+      <!-- Doc 2 - Template Report Sostenibilita (Premium) -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="relative w-10 h-12 bg-blue-500/10 rounded flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+            <span class="absolute -bottom-1 -right-1 px-1 py-0.5 bg-blue-500 rounded text-[8px] font-bold text-white leading-none">DOCX</span>
           </div>
+          <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-semibold">Premium</span>
         </div>
-
-        <div class="bg-card border border-card-border rounded-xl p-6">
-          <h3 class="font-semibold mb-4">Suggeriti per te</h3>
-          <div class="space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded bg-green-500/10 flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M12 18h.01"></path></svg>
-              </div>
-              <div>
-                <p class="text-sm font-medium">Calcolatore Risparmio Idrico</p>
-                <p class="text-xs text-white/40">Basato sul tuo settore</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded bg-blue-500/10 flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
-              </div>
-              <div>
-                <p class="text-sm font-medium">Template Politica Ambientale</p>
-                <p class="text-xs text-white/40">Consigliato per PMI tech</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h3 class="text-sm font-semibold text-white mb-1">Template Report Sostenibilita</h3>
+        <p class="text-xs text-white/40 mb-1">Reporting</p>
+        <p class="text-xs text-white/30 mb-4">1.2 MB</p>
+        <button class="w-full py-2 rounded-lg border border-white/10 text-white/40 font-medium text-sm cursor-not-allowed">Sblocca con Pro</button>
       </div>
+
+      <!-- Doc 3 - Checklist ISO 14001 -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="relative w-10 h-12 bg-red-500/10 rounded flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+            <span class="absolute -bottom-1 -right-1 px-1 py-0.5 bg-red-500 rounded text-[8px] font-bold text-white leading-none">PDF</span>
+          </div>
+        </div>
+        <h3 class="text-sm font-semibold text-white mb-1">Checklist ISO 14001</h3>
+        <p class="text-xs text-white/40 mb-1">Certificazioni</p>
+        <p class="text-xs text-white/30 mb-4">180 KB</p>
+        <button class="w-full py-2 rounded-lg bg-primary text-black font-medium text-sm hover:bg-primary-dark transition-colors">Scarica</button>
+      </div>
+
+      <!-- Doc 4 - Calcolatore Carbon Footprint (Premium) -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="relative w-10 h-12 bg-green-500/10 rounded flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+            <span class="absolute -bottom-1 -right-1 px-1 py-0.5 bg-green-500 rounded text-[8px] font-bold text-white leading-none">XLSX</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-semibold">Premium</span>
+        </div>
+        <h3 class="text-sm font-semibold text-white mb-1">Calcolatore Carbon Footprint</h3>
+        <p class="text-xs text-white/40 mb-1">Strumenti</p>
+        <p class="text-xs text-white/30 mb-4">520 KB</p>
+        <button class="w-full py-2 rounded-lg border border-white/10 text-white/40 font-medium text-sm cursor-not-allowed">Sblocca con Pro</button>
+      </div>
+
+      <!-- Doc 5 - Guida Bandi PNRR 2026 -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="relative w-10 h-12 bg-red-500/10 rounded flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+            <span class="absolute -bottom-1 -right-1 px-1 py-0.5 bg-red-500 rounded text-[8px] font-bold text-white leading-none">PDF</span>
+          </div>
+        </div>
+        <h3 class="text-sm font-semibold text-white mb-1">Guida Bandi PNRR 2026</h3>
+        <p class="text-xs text-white/40 mb-1">Opportunita</p>
+        <p class="text-xs text-white/30 mb-4">3.4 MB</p>
+        <button class="w-full py-2 rounded-lg bg-primary text-black font-medium text-sm hover:bg-primary-dark transition-colors">Scarica</button>
+      </div>
+
+      <!-- Doc 6 - Policy ESG Aziendale (Premium) -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="relative w-10 h-12 bg-blue-500/10 rounded flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+            <span class="absolute -bottom-1 -right-1 px-1 py-0.5 bg-blue-500 rounded text-[8px] font-bold text-white leading-none">DOCX</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-semibold">Premium</span>
+        </div>
+        <h3 class="text-sm font-semibold text-white mb-1">Policy ESG Aziendale</h3>
+        <p class="text-xs text-white/40 mb-1">Compliance</p>
+        <p class="text-xs text-white/30 mb-4">890 KB</p>
+        <button class="w-full py-2 rounded-lg border border-white/10 text-white/40 font-medium text-sm cursor-not-allowed">Sblocca con Pro</button>
+      </div>
+
+      <!-- Doc 7 - Presentazione ESG Stakeholder (Premium) -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="relative w-10 h-12 bg-orange-500/10 rounded flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+            <span class="absolute -bottom-1 -right-1 px-1 py-0.5 bg-orange-500 rounded text-[8px] font-bold text-white leading-none">PPTX</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-semibold">Premium</span>
+        </div>
+        <h3 class="text-sm font-semibold text-white mb-1">Presentazione ESG Stakeholder</h3>
+        <p class="text-xs text-white/40 mb-1">Comunicazione</p>
+        <p class="text-xs text-white/30 mb-4">4.1 MB</p>
+        <button class="w-full py-2 rounded-lg border border-white/10 text-white/40 font-medium text-sm cursor-not-allowed">Sblocca con Pro</button>
+      </div>
+
+      <!-- Doc 8 - FAQ Normativa ESG -->
+      <div class="bg-card border border-card-border rounded-xl p-5 hover:border-white/20 transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="relative w-10 h-12 bg-red-500/10 rounded flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+            <span class="absolute -bottom-1 -right-1 px-1 py-0.5 bg-red-500 rounded text-[8px] font-bold text-white leading-none">PDF</span>
+          </div>
+        </div>
+        <h3 class="text-sm font-semibold text-white mb-1">FAQ Normativa ESG</h3>
+        <p class="text-xs text-white/40 mb-1">Formazione</p>
+        <p class="text-xs text-white/30 mb-4">650 KB</p>
+        <button class="w-full py-2 rounded-lg bg-primary text-black font-medium text-sm hover:bg-primary-dark transition-colors">Scarica</button>
+      </div>
+
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="bg-card border border-card-border rounded-xl p-8 flex items-center justify-between mb-8">
+      <div>
+        <h3 class="text-xl font-bold text-white mb-2">Sblocca l'intero Toolkit</h3>
+        <p class="text-sm text-white/50">Accedi a oltre 50 template, guide e strumenti professionali con il piano Pro o Pioneer</p>
+      </div>
+      <button class="px-6 py-3 bg-primary hover:bg-primary-dark text-black font-semibold rounded-lg transition-colors flex-shrink-0">Aggiorna Piano</button>
     </div>
   </div>
 
-  <!-- FAB ASSISTENZA -->
-  <div class="fixed bottom-8 right-8 z-50">
-    <button class="w-14 h-14 rounded-full bg-primary hover:bg-primary-dark transition-colors flex items-center justify-center shadow-lg shadow-primary/25 relative">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
-      <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">2</span>
-    </button>
-  </div>
+  <!-- FAB Assistenza -->
+  <button class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center shadow-lg shadow-primary/25 transition-all hover:scale-105">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
+    <span class="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 rounded-full text-[10px] font-bold text-white flex items-center justify-center">2</span>
+  </button>
 
 </body>
 </html>

@@ -104,197 +104,216 @@
 
       <!-- Page header -->
       <div class="mb-8">
-        <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2">Opportunita</h1>
-        <p class="text-white/60">Bandi, incentivi e finanziamenti per la sostenibilita</p>
+        <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2">Opportunita &amp; Bandi</h1>
+        <p class="text-white/60">Scopri tutti i finanziamenti e incentivi disponibili per la tua azienda</p>
       </div>
 
-      <!-- Filters + Search -->
+      <!-- 3 Stat Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Bandi Attivi -->
+        <div class="bg-card border border-card-border rounded-xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M7 17l9.2-9.2M17 17V7H7"></path></svg>
+          </div>
+          <div>
+            <p class="text-xs text-white/50 mb-1">Bandi Attivi</p>
+            <p class="text-2xl font-black text-white">24</p>
+            <p class="text-xs text-emerald-400 font-medium">+3 questa settimana</p>
+          </div>
+        </div>
+        <!-- Valore Totale -->
+        <div class="bg-card border border-card-border rounded-xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M7 17l9.2-9.2M17 17V7H7"></path></svg>
+          </div>
+          <div>
+            <p class="text-xs text-white/50 mb-1">Valore Totale</p>
+            <p class="text-2xl font-black text-white">&euro;2.4M</p>
+            <p class="text-xs text-emerald-400 font-medium">Disponibili ora</p>
+          </div>
+        </div>
+        <!-- Match Azienda -->
+        <div class="bg-card border border-card-border rounded-xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M7 17l9.2-9.2M17 17V7H7"></path></svg>
+          </div>
+          <div>
+            <p class="text-xs text-white/50 mb-1">Match Azienda</p>
+            <p class="text-2xl font-black text-white">12</p>
+            <p class="text-xs text-emerald-400 font-medium">Adatti a te</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="relative mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/40"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <input type="text" placeholder="Cerca bandi e opportunita..." class="w-full bg-card border border-card-border rounded-lg pl-12 pr-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-primary/50">
+      </div>
+
+      <!-- Filter pills + Filtri Avanzati -->
       <div class="flex flex-wrap items-center gap-3 mb-8">
         <button class="px-5 py-2 rounded-full text-sm font-semibold bg-primary text-black transition-all">Tutti</button>
-        <button class="px-5 py-2 rounded-full text-sm font-semibold bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20 transition-all">Bandi</button>
-        <button class="px-5 py-2 rounded-full text-sm font-semibold bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20 transition-all">Incentivi</button>
-        <button class="px-5 py-2 rounded-full text-sm font-semibold bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20 transition-all">Finanziamenti</button>
-        <div class="ml-auto relative">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="absolute left-3 top-1/2 -translate-y-1/2 text-white/40"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-          <input type="text" placeholder="Cerca opportunita..." class="bg-card border border-card-border rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-white/40 focus:outline-none focus:border-primary/50 w-64">
-        </div>
+        <button class="px-5 py-2 rounded-full text-sm font-semibold bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20 transition-all">PNRR</button>
+        <button class="px-5 py-2 rounded-full text-sm font-semibold bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20 transition-all">Credito Fiscale</button>
+        <button class="px-5 py-2 rounded-full text-sm font-semibold bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20 transition-all">Regionale</button>
+        <button class="px-5 py-2 rounded-full text-sm font-semibold bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20 transition-all">Economia Circolare</button>
+        <button class="px-5 py-2 rounded-full text-sm font-semibold bg-card border border-card-border text-white/70 hover:text-white hover:border-white/20 transition-all">Mobilita</button>
+        <button class="ml-auto px-4 py-2 rounded-lg text-sm font-semibold text-white/70 hover:text-white border border-card-border hover:border-white/20 transition-all flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"></path><path d="M18 9l-6-6-6 6"></path></svg>
+          + Filtri Avanzati
+        </button>
       </div>
 
-      <!-- Content grid -->
-      <div class="flex gap-8">
+      <!-- Cards grid 3 columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-10">
 
-        <!-- Cards grid (2/3) -->
-        <div class="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-          <!-- Card 1 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-white/15 transition-all group">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-400">Bando</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-500/20 text-green-400">Aperto</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Bando PNRR - Transizione Ecologica PMI</h3>
-            <p class="text-sm text-white/50 mb-4 line-clamp-2">Contributi a fondo perduto per progetti di transizione ecologica destinati a piccole e medie imprese del settore manifatturiero.</p>
-            <div class="flex items-center gap-4 mb-4">
-              <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                <span class="text-sm font-semibold text-white">Fino a 150.000 euro</span>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-white/40">Scade il 30/09/2026</span>
-              <a href="#" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors">Scopri di piu &rarr;</a>
-            </div>
+        <!-- Card 1 -->
+        <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/15 transition-all group">
+          <div class="relative h-44 overflow-hidden">
+            <img src="IMG PH/efficienza.jpeg" alt="Transizione 5.0" class="w-full h-full object-cover">
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center hover:bg-primary/80 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            </button>
+            <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-primary text-black">IN EVIDENZA</span>
           </div>
-
-          <!-- Card 2 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-white/15 transition-all group">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400">Incentivo</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-400">In scadenza</span>
+          <div class="p-5">
+            <h3 class="text-base font-bold text-white mb-3 group-hover:text-primary transition-colors">Transizione 5.0 - Efficienza Energetica</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span class="text-sm text-white/60">FONDI: <span class="text-white font-semibold">&euro;150.000</span></span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Incentivo Regione Lombardia - Efficienza Energetica</h3>
-            <p class="text-sm text-white/50 mb-4 line-clamp-2">Agevolazioni per interventi di efficientamento energetico negli edifici aziendali, con copertura fino al 40% dei costi.</p>
-            <div class="flex items-center gap-4 mb-4">
-              <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                <span class="text-sm font-semibold text-white">Fino a 80.000 euro</span>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-white/40">Scade il 15/07/2026</span>
-              <a href="#" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors">Scopri di piu &rarr;</a>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-white/15 transition-all group">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400">Finanziamento</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-500/20 text-green-400">Aperto</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Fondo Nazionale per la Sostenibilita d'Impresa</h3>
-            <p class="text-sm text-white/50 mb-4 line-clamp-2">Finanziamento agevolato a tasso zero per progetti di economia circolare e riduzione delle emissioni CO2.</p>
-            <div class="flex items-center gap-4 mb-4">
-              <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                <span class="text-sm font-semibold text-white">Fino a 500.000 euro</span>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-white/40">Scade il 31/12/2026</span>
-              <a href="#" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors">Scopri di piu &rarr;</a>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-white/15 transition-all group">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-400">Bando</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-500/20 text-green-400">Aperto</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Bando MISE - Innovazione Sostenibile</h3>
-            <p class="text-sm text-white/50 mb-4 line-clamp-2">Sostegno a progetti di R&S orientati alla sostenibilita ambientale, con focus su tecnologie pulite e processi green.</p>
-            <div class="flex items-center gap-4 mb-4">
-              <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                <span class="text-sm font-semibold text-white">Fino a 200.000 euro</span>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-white/40">Scade il 28/11/2026</span>
-              <a href="#" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors">Scopri di piu &rarr;</a>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-white/15 transition-all group">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400">Incentivo</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-500/20 text-green-400">Aperto</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Credito d'Imposta Formazione ESG</h3>
-            <p class="text-sm text-white/50 mb-4 line-clamp-2">Credito d'imposta fino al 50% per attivita di formazione del personale su tematiche ESG e rendicontazione di sostenibilita.</p>
-            <div class="flex items-center gap-4 mb-4">
-              <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                <span class="text-sm font-semibold text-white">Fino a 45.000 euro</span>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-white/40">Scade il 31/10/2026</span>
-              <a href="#" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors">Scopri di piu &rarr;</a>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="bg-card border border-card-border rounded-xl p-6 hover:border-white/15 transition-all group">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400">Finanziamento</span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold bg-yellow-500/20 text-yellow-400">In scadenza</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Green Bond PMI - Cassa Depositi e Prestiti</h3>
-            <p class="text-sm text-white/50 mb-4 line-clamp-2">Prestiti obbligazionari green per finanziare investimenti in energie rinnovabili, mobilita sostenibile e gestione rifiuti.</p>
-            <div class="flex items-center gap-4 mb-4">
-              <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                <span class="text-sm font-semibold text-white">Fino a 1.000.000 euro</span>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-white/40">Scade il 20/07/2026</span>
-              <a href="#" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors">Scopri di piu &rarr;</a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Sidebar destra - Riepilogo -->
-        <div class="hidden xl:block w-80 flex-shrink-0">
-          <div class="bg-card border border-card-border rounded-xl p-6 sticky top-10">
-            <h3 class="text-lg font-bold text-white mb-6">Riepilogo</h3>
-
-            <div class="space-y-5">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                </div>
-                <div>
-                  <div class="text-2xl font-black text-white">12</div>
-                  <div class="text-xs text-white/50">Opportunita attive</div>
-                </div>
-              </div>
-
-              <div class="w-full h-px bg-card-border"></div>
-
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-yellow-400"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
-                </div>
-                <div>
-                  <div class="text-2xl font-black text-white">3</div>
-                  <div class="text-xs text-white/50">In scadenza</div>
-                </div>
-              </div>
-
-              <div class="w-full h-px bg-card-border"></div>
-
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                </div>
-                <div>
-                  <div class="text-2xl font-black text-white">245.000 &euro;</div>
-                  <div class="text-xs text-white/50">Erogabili</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 pt-6 border-t border-card-border">
-              <p class="text-xs text-white/40 leading-relaxed">I dati sono aggiornati in tempo reale e personalizzati in base al profilo della tua azienda.</p>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/40"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              <span class="text-sm text-white/50">Scadenza: 30 Giu 2026</span>
             </div>
           </div>
         </div>
 
+        <!-- Card 2 -->
+        <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/15 transition-all group">
+          <div class="relative h-44 overflow-hidden">
+            <img src="IMG PH/Green Economy Case.jpeg" alt="Credito Imposta" class="w-full h-full object-cover">
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center hover:bg-primary/80 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            </button>
+            <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-blue-500 text-white">CREDITO FISCALE</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-base font-bold text-white mb-3 group-hover:text-primary transition-colors">Credito d'Imposta per Innovazione Sostenibile</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span class="text-sm text-white/60">FONDI: <span class="text-white font-semibold">&euro;80.000</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/40"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              <span class="text-sm text-white/50">Scadenza: 15 Set 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/15 transition-all group">
+          <div class="relative h-44 overflow-hidden">
+            <img src="IMG PH/Green Economy Case (1).jpeg" alt="Fondo Regionale" class="w-full h-full object-cover">
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center hover:bg-primary/80 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            </button>
+            <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-purple-500 text-white">REGIONALE</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-base font-bold text-white mb-3 group-hover:text-primary transition-colors">Fondo Regionale Green Economy</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span class="text-sm text-white/60">FONDI: <span class="text-white font-semibold">&euro;200.000</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/40"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              <span class="text-sm text-white/50">Scadenza: 30 Dic 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/15 transition-all group">
+          <div class="relative h-44 overflow-hidden">
+            <img src="IMG PH/Green Economy Case Image.jpeg" alt="Economia Circolare" class="w-full h-full object-cover">
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center hover:bg-primary/80 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            </button>
+            <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-amber-500 text-black">ECONOMIA CIRCOLARE</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-base font-bold text-white mb-3 group-hover:text-primary transition-colors">Bando Economia Circolare 2026</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span class="text-sm text-white/60">FONDI: <span class="text-white font-semibold">&euro;120.000</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/40"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              <span class="text-sm text-white/50">Scadenza: 10 Ago 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/15 transition-all group">
+          <div class="relative h-44 overflow-hidden">
+            <img src="IMG PH/Direttiva Case Green UE.jpg" alt="Mobilita Sostenibile" class="w-full h-full object-cover">
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center hover:bg-primary/80 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            </button>
+            <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-primary text-black">MOBILITA</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-base font-bold text-white mb-3 group-hover:text-primary transition-colors">Incentivi Mobilita Sostenibile</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span class="text-sm text-white/60">FONDI: <span class="text-white font-semibold">&euro;60.000</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/40"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              <span class="text-sm text-white/50">Scadenza: 05 Nov 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-card border border-card-border rounded-xl overflow-hidden hover:border-white/15 transition-all group">
+          <div class="relative h-44 overflow-hidden">
+            <img src="IMG PH/Green Economy Case copia.jpeg" alt="Certificazioni Green" class="w-full h-full object-cover">
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center hover:bg-primary/80 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            </button>
+            <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-primary text-black">CERTIFICAZIONI</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-base font-bold text-white mb-3 group-hover:text-primary transition-colors">Sostegno Certificazioni Green</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span class="text-sm text-white/60">FONDI: <span class="text-white font-semibold">&euro;45.000</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/40"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              <span class="text-sm text-white/50">Scadenza: 30 Dic 2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner CTA -->
+      <div class="bg-card border border-card-border rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M12 2a4 4 0 0 0-4 4c0 2 1 3.5 2 4.5L12 12l2-1.5C15 9.5 16 8 16 6a4 4 0 0 0-4-4z"></path><path d="M12 12v10"></path><path d="M8 22h8"></path></svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Lascia che AI Copilot trovi i bandi perfetti per te</h3>
+            <p class="text-sm text-white/50">Disponibile con il piano Pioneer. Analisi automatica e matching intelligente.</p>
+          </div>
+        </div>
+        <button class="px-6 py-3 bg-primary text-black font-bold rounded-lg hover:bg-primary-dark transition-all flex-shrink-0">Scopri Pioneer</button>
       </div>
 
     </div>
