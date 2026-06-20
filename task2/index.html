@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 002 - Punti GH e Traguardi Collettivi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .nav-link { transition: all 0.2s; }
+    .nav-link.active { color: #047857; background: #ecfdf5; font-weight: 700; }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+
+  <!-- ===== BARRA NAVIGAZIONE STICKY ===== -->
+  <div class="sticky top-0 z-50 bg-white border-b-2 border-gray-200 shadow-sm">
+    <div class="max-w-5xl mx-auto flex">
+      <div class="flex-1 border-r-2 border-gray-200">
+        <div class="px-4 py-1.5 text-[10px] font-bold text-gray-400 uppercase tracking-widest bg-gray-50 border-b border-gray-100">Documentazione Task</div>
+        <div class="flex divide-x divide-gray-100">
+          <a href="#panoramica" class="nav-link flex-1 px-3 py-2.5 text-xs font-semibold text-gray-500 text-center hover:bg-gray-50" data-section="panoramica">Panoramica</a>
+          <a href="#flusso1" class="nav-link flex-1 px-3 py-2.5 text-xs font-semibold text-gray-500 text-center hover:bg-gray-50" data-section="flusso1">Flusso 1</a>
+          <a href="#flusso2" class="nav-link flex-1 px-3 py-2.5 text-xs font-semibold text-gray-500 text-center hover:bg-gray-50" data-section="flusso2">Flusso 2</a>
+          <a href="#flusso3" class="nav-link flex-1 px-3 py-2.5 text-xs font-semibold text-gray-500 text-center hover:bg-gray-50" data-section="flusso3">Flusso 3</a>
+        </div>
+      </div>
+      <div class="w-56 flex-shrink-0 bg-emerald-500">
+        <div class="px-4 py-1.5 text-[10px] font-bold text-white uppercase tracking-widest border-b border-emerald-400">Mockup live</div>
+        <div class="flex divide-x divide-emerald-400">
+          <a href="https://gianpaologreco.github.io/GreenHub-MockUp/dashboard.html" target="_blank" class="flex-1 px-3 py-2.5 text-xs font-bold text-white text-center hover:bg-emerald-600 transition-colors">Dashboard</a>
+          <a href="https://gianpaologreco.github.io/GreenHub-MockUp/certificato-impact.html" target="_blank" class="flex-1 px-3 py-2.5 text-xs font-bold text-white text-center hover:bg-emerald-600 transition-colors">Certificato</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-6 py-12">
+
+    <!-- ============================================================ -->
+    <!-- PANORAMICA                                                    -->
+    <!-- ============================================================ -->
+    <section id="panoramica" class="scroll-mt-24">
+
+      <div class="border-b border-gray-200 pb-8 mb-10">
+        <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-700 text-xs font-bold">TASK 002</span>
+        <h1 class="text-3xl font-extrabold tracking-tight mt-3 mb-1">Punti GH e Traguardi Collettivi</h1>
+        <p class="text-gray-400 text-sm">Priorita P1 - Size L - Feature</p>
+      </div>
+
+      <!-- Descrizione -->
+      <div class="mb-12">
+        <h2 class="text-xl font-extrabold mb-4">Descrizione</h2>
+        <div class="text-[15px] text-gray-700 leading-relaxed space-y-4">
+          <p>GreenHub vuole che le azioni degli utenti sulla piattaforma abbiano un impatto reale e misurabile. Per farlo, ogni azione (leggere un articolo, scaricare un documento, partecipare a un evento, completare una missione) genera dei <strong>Punti GH</strong>. Questi punti non sono individuali: alimentano un <strong>contatore globale condiviso</strong> tra tutti gli utenti.</p>
+          <p>Quando il contatore raggiunge una soglia prestabilita, GreenHub sblocca un <strong>traguardo collettivo</strong>: un'azione concreta nel mondo reale, come piantare 200 alberi certificati o organizzare una giornata di pulizia spiagge. L'idea e che ogni utente contribuisce con le proprie azioni quotidiane a qualcosa di piu grande, visibile a tutti.</p>
+          <p>I traguardi sbloccati diventano <strong>attestati</strong> nel certificato personale dell'utente, ma solo se il certificato e attivo (livello 1). Chi ha ancora il livello 0 accumula i traguardi, ma non li vede nel certificato finche non completa il Percorso IMPACT.</p>
+          <p>Nella dashboard l'utente vede il progresso collettivo, le missioni disponibili per contribuire, e puo anche donare per accelerare il raggiungimento del prossimo traguardo.</p>
+        </div>
+      </div>
+
+      <!-- Obiettivo -->
+      <div class="mb-12">
+        <h2 class="text-xl font-extrabold mb-4">Obiettivo</h2>
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-5">
+          <p class="text-[15px] text-gray-800 leading-relaxed">Sostituire il sistema di gamification individuale (XP, badge, streak, livelli) con un modello collettivo basato su Punti GH e traguardi condivisi che sbloccano azioni reali.</p>
+        </div>
+      </div>
+
+      <!-- Flusso utente -->
+      <div class="mb-12">
+        <h2 class="text-xl font-extrabold mb-4">Flusso utente</h2>
+        <p class="text-sm text-gray-500 mb-5">Questo e il percorso che fa l'utente. Clicca su ogni step per andare alla sezione con i dettagli.</p>
+        <div class="space-y-3">
+          <a href="#flusso1" class="block p-5 border-2 border-gray-200 rounded-lg hover:border-emerald-400 transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold text-sm flex items-center justify-center flex-shrink-0">1</div>
+              <div class="flex-1">
+                <h3 class="text-base font-bold text-gray-800 group-hover:text-emerald-700">L'utente apre la dashboard e vede il progresso collettivo</h3>
+                <p class="text-sm text-gray-500 mt-0.5">Stat card in alto, barra collettiva con roadmap traguardi, missioni attive.</p>
+              </div>
+            </div>
+          </a>
+          <div class="flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-300"><path d="m6 9 6 6 6-6"></path></svg></div>
+          <a href="#flusso2" class="block p-5 border-2 border-gray-200 rounded-lg hover:border-emerald-400 transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold text-sm flex items-center justify-center flex-shrink-0">2</div>
+              <div class="flex-1">
+                <h3 class="text-base font-bold text-gray-800 group-hover:text-emerald-700">Completa missioni e genera Punti GH</h3>
+                <p class="text-sm text-gray-500 mt-0.5">Ogni missione completata aggiunge punti al contatore globale. Puo anche donare per accelerare.</p>
+              </div>
+            </div>
+          </a>
+          <div class="flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-300"><path d="m6 9 6 6 6-6"></path></svg></div>
+          <a href="#flusso3" class="block p-5 border-2 border-gray-200 rounded-lg hover:border-emerald-400 transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold text-sm flex items-center justify-center flex-shrink-0">3</div>
+              <div class="flex-1">
+                <h3 class="text-base font-bold text-gray-800 group-hover:text-emerald-700">Un traguardo viene raggiunto e genera un attestato</h3>
+                <p class="text-sm text-gray-500 mt-0.5">L'attestato appare nel certificato dell'utente (solo se ha livello 1 attivo).</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Assumption -->
+      <div class="mb-12">
+        <h2 class="text-xl font-extrabold mb-4">Assumption</h2>
+        <ul class="space-y-3 text-[15px] text-gray-700 leading-relaxed">
+          <li>- I Punti GH sono <strong>collettivi</strong>: le azioni di tutti gli utenti alimentano un unico contatore globale, non un punteggio individuale.</li>
+          <li>- I valori dei punti e delle soglie dei traguardi nel mockup sono esempi. I valori reali saranno definiti dal business.</li>
+          <li>- Le missioni sono configurabili: testi, punti e link possono variare.</li>
+          <li>- La donazione e sempre opzionale, mai obbligatoria o invasiva.</li>
+          <li>- Chi dona riceve una certificazione aggiuntiva nel certificato.</li>
+          <li>- Gli attestati dei traguardi sono visibili nel certificato solo con certificato attivo (livello 1). Con livello 0, si accumulano ma non si vedono.</li>
+          <li>- I traguardi non devono essere per forza costosi per GreenHub. Il valore percepito conta piu del costo reale (es. "giornata pulizia spiagge" organizzata dalla ATS).</li>
+          <li>- Il punteggio della gamification NON fa salire il livello del certificato. Sono due sistemi separati che si incrociano solo sugli attestati.</li>
+        </ul>
+      </div>
+
+      <!-- Cosa togliere -->
+      <div class="mb-12">
+        <h2 class="text-xl font-extrabold mb-4">Cosa togliere dalla versione attuale</h2>
+        <div class="bg-red-50 border-2 border-red-300 rounded-lg p-5">
+          <ul class="space-y-3 text-[15px] text-gray-800 leading-relaxed">
+            <li>- <strong>XP individuali</strong> - sostituiti dai Punti GH collettivi</li>
+            <li>- <strong>Badge individuali</strong> - sostituiti dai traguardi collettivi che diventano attestati</li>
+            <li>- <strong>Streak giornaliero</strong> - meccanica individuale rimossa</li>
+            <li>- <strong>Livelli individuali</strong> (Seed/Sprout/Tree/Forest/Ecosystem) - il livello e solo quello del certificato (0 o 1)</li>
+            <li>- <strong>Classifica/leaderboard individuale</strong> - non esiste piu competizione tra utenti</li>
+            <li>- <strong>Green Credits</strong> - sostituiti dai Punti GH</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dipendenza -->
+      <div class="mb-12">
+        <h2 class="text-xl font-extrabold mb-4">Dipendenza</h2>
+        <p class="text-[15px] text-gray-700 leading-relaxed">Questo task dipende dal <strong>Task 001 (Percorso IMPACT)</strong> per il collegamento con il certificato: gli attestati dei traguardi collettivi si vedono nel certificato solo se l'utente ha il livello 1. I due task si possono sviluppare in parallelo, ma il punto di contatto "attestati visibili solo con certificato attivo" va coordinato.</p>
+      </div>
+
+    </section>
+
+    <!-- Separatore -->
+    <div class="border-t-4 border-emerald-200 my-16"></div>
+
+    <!-- ============================================================ -->
+    <!-- FLUSSO 1 - Dashboard e progresso collettivo                    -->
+    <!-- ============================================================ -->
+    <section id="flusso1" class="scroll-mt-24">
+
+      <div class="border-b border-gray-200 pb-6 mb-8">
+        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Flusso 1</span>
+        <h1 class="text-2xl font-extrabold tracking-tight mt-1">Dashboard e progresso collettivo</h1>
+        <p class="text-gray-500 mt-1">Cosa vede l'utente quando apre la dashboard.</p>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Cosa deve fare lo sviluppatore</h2>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">1.</span>
+            <span>Mostrare <strong>3 stat card</strong> in alto: Punti GH totali (contribuiti dall'utente), Missioni (completate su totale), stato del certificato (livello 0 o 1)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">2.</span>
+            <span>Sotto le stat card, mostrare la <strong>barra collettiva</strong>: un progresso che mostra il totale Punti GH di TUTTI gli utenti e la percentuale verso il prossimo traguardo</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">3.</span>
+            <span>Sotto la barra, una <strong>roadmap visuale</strong> con le milestone (es. 500 GH, 1.000 GH, 2.000 GH, 5.000 GH, 10.000 GH). Ogni milestone ha un traguardo associato (es. "GreenHub piantera 200 alberi certificati")</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">4.</span>
+            <span>Le milestone raggiunte appaiono come <strong>completate</strong> (check verde), quella in corso con il progresso, quelle future come <strong>bloccate</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">5.</span>
+            <span>La barra e la roadmap sono <strong>uguali per tutti gli utenti</strong> (dato globale, non per singolo utente)</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Sidebar "Nel tuo certificato"</h2>
+        <p class="text-sm text-gray-700">Nella colonna destra della dashboard, mostrare una sezione che elenca i traguardi collettivi gia sbloccati come attestati. Se il certificato e livello 0, mostrare un messaggio tipo "Attiva il certificato per vedere i tuoi attestati".</p>
+      </div>
+
+    </section>
+
+    <!-- Separatore -->
+    <div class="border-t-4 border-emerald-200 my-16"></div>
+
+    <!-- ============================================================ -->
+    <!-- FLUSSO 2 - Missioni e donazione                                -->
+    <!-- ============================================================ -->
+    <section id="flusso2" class="scroll-mt-24">
+
+      <div class="border-b border-gray-200 pb-6 mb-8">
+        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Flusso 2</span>
+        <h1 class="text-2xl font-extrabold tracking-tight mt-1">Missioni e donazione</h1>
+        <p class="text-gray-500 mt-1">Come l'utente contribuisce al traguardo collettivo.</p>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Missioni</h2>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">1.</span>
+            <span>Le missioni sono una lista di azioni che l'utente puo fare sulla piattaforma (leggere un articolo, scaricare un documento, partecipare a un evento, ecc.)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">2.</span>
+            <span>Ogni missione ha un <strong>valore in Punti GH</strong> e un <strong>link</strong> alla pagina dove completarla</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">3.</span>
+            <span>Le missioni completate appaiono con <strong>opacita ridotta e check verde</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">4.</span>
+            <span>I contenuti delle missioni (testi, punti, link) sono configurabili</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Donazione</h2>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">1.</span>
+            <span>Sotto la barra collettiva, mostrare una <strong>CTA per donare</strong> verso il prossimo traguardo. Testo tipo: "Vuoi contribuire maggiormente? Aggiungi punti GH con una donazione e ottieni una certificazione aggiuntiva"</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">2.</span>
+            <span>Accanto alla donazione, un secondo blocco per <strong>azioni personalizzate dal Marketplace</strong>: "Vuoi un'azione dedicata? Esplora il marketplace"</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">3.</span>
+            <span>La donazione e <strong>sempre opzionale</strong>. Non deve mai sembrare obbligatoria o bloccare il flusso</span>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Separatore -->
+    <div class="border-t-4 border-emerald-200 my-16"></div>
+
+    <!-- ============================================================ -->
+    <!-- FLUSSO 3 - Traguardo raggiunto e attestato                     -->
+    <!-- ============================================================ -->
+    <section id="flusso3" class="scroll-mt-24">
+
+      <div class="border-b border-gray-200 pb-6 mb-8">
+        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Flusso 3</span>
+        <h1 class="text-2xl font-extrabold tracking-tight mt-1">Traguardo raggiunto e attestato</h1>
+        <p class="text-gray-500 mt-1">Cosa succede quando il contatore globale raggiunge una soglia.</p>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Cosa deve fare lo sviluppatore</h2>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">1.</span>
+            <span>Quando il contatore globale raggiunge una milestone, il traguardo si segna come <strong>completato</strong> nella roadmap (check verde, colore pieno)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">2.</span>
+            <span>Il traguardo genera un <strong>attestato</strong> che appare nella sezione "Nel tuo certificato" della dashboard</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">3.</span>
+            <span>Lo stesso attestato appare anche nella <strong>pagina del certificato</strong>, nella sezione "Attestati ESG"</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">4.</span>
+            <span>Gli attestati nel certificato sono <strong>visibili solo se il certificato e attivo</strong> (livello 1). Con livello 0, l'utente vede un messaggio che lo invita a completare il Percorso IMPACT</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold mt-0.5">5.</span>
+            <span>La barra collettiva avanza verso la <strong>prossima milestone</strong></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Due sistemi separati</h2>
+        <p class="text-sm text-gray-700">Attenzione: la barra collettiva della gamification e la progressione del certificato sono due cose distinte. I Punti GH non fanno salire il livello del certificato. I due sistemi si incrociano solo nel punto in cui i traguardi collettivi diventano attestati visibili nel certificato.</p>
+      </div>
+
+    </section>
+
+    <!-- Separatore -->
+    <div class="border-t-4 border-emerald-200 my-16"></div>
+
+    <!-- ============================================================ -->
+    <!-- CRITERI DI ACCETTAZIONE                                       -->
+    <!-- ============================================================ -->
+    <section class="mb-16">
+      <h2 class="text-xl font-extrabold mb-6">Criteri di accettazione</h2>
+      <ul class="space-y-3 text-[15px] text-gray-700 leading-relaxed">
+        <li>- Rimossi completamente: XP, badge, streak, livelli individuali, classifica</li>
+        <li>- Le stat card mostrano Punti GH, Missioni e stato Certificato</li>
+        <li>- La barra collettiva mostra il totale globale e la percentuale verso il prossimo traguardo</li>
+        <li>- La roadmap mostra le milestone con stato completato, in corso o bloccato</li>
+        <li>- Le missioni funzionano con punti GH e link alle pagine rilevanti</li>
+        <li>- La sezione "Nel tuo certificato" mostra gli attestati dei traguardi raggiunti</li>
+        <li>- Gli attestati nel certificato sono visibili solo con certificato attivo (livello 1)</li>
+        <li>- La CTA donazione e presente e non invasiva</li>
+        <li>- La barra collettiva e i traguardi sono dati globali, uguali per tutti gli utenti</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- ===== SCROLL SPY ===== -->
+  <script>
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-link');
+
+    function updateNav() {
+      var scrollY = window.scrollY + 120;
+      var current = 'panoramica';
+
+      sections.forEach(function(section) {
+        if (scrollY >= section.offsetTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('data-section') === current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateNav);
+    updateNav();
+  </script>
+
+</body>
+</html>
